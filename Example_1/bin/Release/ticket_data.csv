@@ -1,0 +1,2 @@
+"Title","Description","Impact","Urgency","AssignedTo","AffectedUser","TierQueue","Classification","Source","Status","TicketID","TicketLink"
+"application issue","arman has an issue with an application","System.WorkItem.TroubleTicket.ImpactEnum.Low","System.WorkItem.TroubleTicket.UrgencyEnum.Low","Arman.Ramazyan","arman.ramazyan","PITechWest","IncidentClassificationEnum.EnterpriseApplications","Console","Active","IR270","http://GLD-win2016-d1:8080/MyRequests/RequestDetails?type=IncidentRequest&id=IR270"

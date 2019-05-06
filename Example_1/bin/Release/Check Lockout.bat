@@ -1,0 +1,1 @@
+start powershell.exe -ExecutionPolicy Bypass .\lockoutstatus.ps1
