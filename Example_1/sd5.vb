@@ -820,7 +820,7 @@ Public Class Form1
     End Sub
 
     Private Sub WebsiteToolStripMenuItem_Click_1(sender As Object, e As EventArgs) Handles WebsiteToolStripMenuItem.Click
-        Process.Start("http://www.rm519.com")
+        Process.Start("https://github.com/Arman519/ADAT")
     End Sub
 
     Private Sub ListGroupMembersButton_Click(sender As Object, e As EventArgs)
