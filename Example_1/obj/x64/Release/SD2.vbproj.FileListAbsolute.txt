@@ -23,3 +23,5 @@ C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\obj\x64\Release\SD.appli
 C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\obj\x64\Release\SD.exe
 C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\obj\x64\Release\SD.xml
 C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\obj\x64\Release\SD.pdb
+P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\obj\x64\Release\SD2.vbprojAssemblyReference.cache
+P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\obj\x64\Release\SD2.vbproj.ResolveComReference.cache

@@ -8,7 +8,7 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("Service Desk Manager")>
-<Assembly: AssemblyDescription("SCSM and Active Directory Manager")>
+<Assembly: AssemblyDescription("Active Directory Manager")>
 <Assembly: AssemblyCompany("RM")>
 <Assembly: AssemblyProduct("Service Desk Manager")>
 <Assembly: AssemblyCopyright("Arman Corp")>

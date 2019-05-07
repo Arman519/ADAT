@@ -42,20 +42,6 @@ Public Class Form1
         TbUserID.Focus()
     End Sub
 
-
-
-
-    'Get LAPS UI Pass
-    Private Function GetAdminPass()
-        Dim Script As New StringBuilder()
-        Script.Append("$id = " + Chr(34) + SelectedComputer.Text + Chr(34) + vbCrLf)
-        Script.Append("$ComputerName = $id" + vbCrLf)
-        Script.Append("$getpass = Get-AdmPwdPassword –Computername $id" + vbCrLf)
-        Script.Append("$getpass.Password" + vbCrLf)
-        Return Script.ToString()
-    End Function
-
-
     'Gets Selected Computer info Powershell script
     Private Function GetUserComputerSelected()
         Dim Script As New StringBuilder()
@@ -142,6 +128,17 @@ Public Class Form1
         Script.Append("(Get-Content $items) | Foreach-Object {$_ -replace '" + Chr(34) + "', " + Chr(34) + "" + Chr(34) + "} | Set-Content $items" + vbCrLf)
         Return Script.ToString()
     End Function
+
+    'Get Members Script
+    Private Function GetGroupMembers()
+        Dim Script As New StringBuilder()
+        Script.Append("Import-Module ActiveDirectory" + vbCrLf)
+        Script.Append("Get-ADPrincipalGroupMembership adm-arman.ramazyan | select name -Verbose" + vbCrLf)
+        Return Script.ToString()
+    End Function
+
+
+
 
     'Get apps script
     Private Function GetApps()
@@ -524,8 +521,16 @@ Public Class Form1
         End Using 'Close the directory entry to the user object
 
         Hourglass(False)
+        'enable the AD management buttons
         BtnLockout.Enabled = True
         UnlockButton.Enabled = True
+
+        Try
+            TBADGroupMemberships.Text = RunScript(GetGroupMembers).ToString() 'runs powershell script to get user group membership
+            TBADGroupMemberships.Text = TBADGroupMemberships.Text.Replace("@{name=", "")
+            TBADGroupMemberships.Text = TBADGroupMemberships.Text.Replace("}", "")
+        Catch
+        End Try
 
         Hourglass(True)
         GC.Collect()
@@ -641,8 +646,10 @@ Public Class Form1
         lblCRole.Text = ""
         lblCDepartment.Text = ""
         ResultsBox.Clear()
+        TBADGroupMemberships.Clear()
         BtnLockout.Enabled = False
         UnlockButton.Enabled = False
+
 
     End Sub
 
@@ -808,6 +815,8 @@ Public Class Form1
 
         Try
             InstalledApps.InstalledAppsRtb.Text = RunScript(GetApps).ToString() 'runs powershell script to get apps
+            InstalledApps.InstalledAppsRtb.Text = InstalledApps.InstalledAppsRtb.Text.Replace("@{AppName=", "")
+            InstalledApps.InstalledAppsRtb.Text = InstalledApps.InstalledAppsRtb.Text.Replace("}", "")
         Catch
         End Try
         Hourglass(False)
@@ -817,6 +826,14 @@ Public Class Form1
         Process.Start("http://www.rm519.com")
     End Sub
 
+    Private Sub ListGroupMembersButton_Click(sender As Object, e As EventArgs)
+        Hourglass(True)
 
+        Try
+            TBADGroupMemberships.Text = RunScript(GetGroupMembers).ToString() 'runs powershell script to get user group memberships
+        Catch
+        End Try
+        Hourglass(False)
+    End Sub
 
 End Class

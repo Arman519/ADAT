@@ -24,10 +24,5 @@ Public Class InstalledApps
         Close()
     End Sub
 
-    Private Sub InstalledApps_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-
-    End Sub
-
 
 End Class
