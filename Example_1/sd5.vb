@@ -843,7 +843,7 @@ Public Class Form1
         Process.Start("http://www.rm519.com")
     End Sub
 
-    Private Sub GetAdminPassButton_Click(sender As Object, e As EventArgs) Handles GetAdminPassButton.Click
+    Private Sub GetAdminPassButton_Click(sender As Object, e As EventArgs) 
         Hourglass(True)
         AdminPass.Show()
 
