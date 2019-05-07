@@ -3,3 +3,28 @@ P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\obj\x64\Release\SD2.vbproj.Re
 P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\obj\x64\Release\SD.exe
 P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\obj\x64\Release\SD.xml
 P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\obj\x64\Release\SD.pdb
+C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\bin\x64\Release\syn.syn
+C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\bin\x64\Release\SD.exe.config
+C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\bin\x64\Release\SD.exe.manifest
+C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\bin\x64\Release\SD.application
+C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\bin\x64\Release\SD.exe
+C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\bin\x64\Release\SD.pdb
+C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\bin\x64\Release\SD.xml
+C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\bin\x64\Release\Microsoft.PowerShell.Commands.Management.dll
+C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\bin\x64\Release\Microsoft.PowerShell.Commands.Utility.dll
+C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\bin\x64\Release\Microsoft.PowerShell.ConsoleHost.dll
+C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\bin\x64\Release\Microsoft.PowerShell.Security.dll
+C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\bin\x64\Release\System.Management.Automation.dll
+C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\bin\x64\Release\System.Management.Automation.Resources.dll
+C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\obj\x64\Release\SD2.vbprojResolveAssemblyReference.cache
+C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\obj\x64\Release\SD2.vbproj.ResolveComReference.cache
+C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\obj\x64\Release\SD1.AdminPass.resources
+C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\obj\x64\Release\SD1.InstalledApps.resources
+C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\obj\x64\Release\SD1.Resources.resources
+C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\obj\x64\Release\SD1.Form1.resources
+C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\obj\x64\Release\SD2.vbproj.GenerateResource.Cache
+C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\obj\x64\Release\SD.exe.manifest
+C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\obj\x64\Release\SD.application
+C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\obj\x64\Release\SD.exe
+C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\obj\x64\Release\SD.xml
+C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\obj\x64\Release\SD.pdb
