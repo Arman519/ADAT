@@ -1,8 +1,3 @@
-P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\obj\x64\Release\SD2.vbprojAssemblyReference.cache
-P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\obj\x64\Release\SD2.vbproj.ResolveComReference.cache
-P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\obj\x64\Release\SD.exe
-P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\obj\x64\Release\SD.xml
-P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\obj\x64\Release\SD.pdb
 C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\bin\x64\Release\syn.syn
 C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\bin\x64\Release\SD.exe.config
 C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\bin\x64\Release\SD.exe.manifest

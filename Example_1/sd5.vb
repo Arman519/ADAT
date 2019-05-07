@@ -28,7 +28,6 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         TbUserID.Clear()
-        ComputerList.Items.Clear()
         SelectedComputer.Clear()
         TbEmail.Clear()
         TbHome.Clear()
@@ -323,20 +322,10 @@ Public Class Form1
         End If
     End Sub
 
-    'After Selecting a Computer from the list, this will fill the Computer Name field and trigger the Computer Search button
-    Private Sub ComputerList_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComputerList.SelectedIndexChanged
-        Hourglass(True)
-        SelectedComputer.Text = ComputerList.SelectedItem
-
-        Hourglass(False)
-        Call SearchComputer_Click(sender, e)
-
-    End Sub
 
     'search user button!! this is where you search for the user in active directory
     Private Sub BtnSearch_Click(sender As System.Object, e As EventArgs) Handles BtnSearch.Click
         Hourglass(True) 'Calls the sub to turn on the wait cursor.
-        ComputerList.Items.Clear() 'Clears the computer list box
         ListView1.Items.Clear() 'Clear the items from the previous search.  
 
         Using Root As New DirectoryEntry 'Establish connection to current loged on users Active Directory
@@ -539,20 +528,6 @@ Public Class Form1
         UnlockButton.Enabled = True
 
         Hourglass(True)
-        Try
-            ResultsBox.Text = RunScript(GetUserComputerSelected).ToString() 'runs powershell script to get computer info
-
-            Using sr As New StreamReader("C:\Program Files\Active Directory Admin Tool\Data\PI_Computers.csv")
-                sr.ReadLine.Split(","c)
-                While Not sr.EndOfStream
-                    Dim newline() As String = sr.ReadLine.Split(","c)
-                    ComputerList.Items.Add(newline(1).ToString)
-
-                End While
-                sr.Close()
-            End Using
-        Catch
-        End Try
         GC.Collect()
         GC.WaitForPendingFinalizers()
         Hourglass(False)
@@ -640,7 +615,6 @@ Public Class Form1
         rtbNotes.Clear()
         ListView1.Items.Clear()
         ListView2.Items.Clear()
-        ComputerList.Items.Clear()
         TbManager.Clear()
         TbUserID.Focus()
         ModelValue.Clear()
@@ -843,15 +817,6 @@ Public Class Form1
         Process.Start("http://www.rm519.com")
     End Sub
 
-    Private Sub GetAdminPassButton_Click(sender As Object, e As EventArgs) 
-        Hourglass(True)
-        AdminPass.Show()
 
-        Try
-            AdminPass.AdminPassText.Text = RunScript(GetAdminPass).ToString() 'runs powershell script to get admin pass
-        Catch
-        End Try
-        Hourglass(False)
-    End Sub
 
 End Class

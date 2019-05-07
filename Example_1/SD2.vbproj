@@ -157,12 +157,6 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminPass.Designer.vb">
-      <DependentUpon>AdminPass.vb</DependentUpon>
-    </Compile>
-    <Compile Include="AdminPass.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="InstalledApps.Designer.vb">
       <DependentUpon>InstalledApps.vb</DependentUpon>
@@ -193,9 +187,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AdminPass.resx">
-      <DependentUpon>AdminPass.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="InstalledApps.resx">
       <DependentUpon>InstalledApps.vb</DependentUpon>
     </EmbeddedResource>
@@ -222,7 +213,6 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="SD2_TemporaryKey.pfx" />
     <None Include="syn.syn">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
