@@ -62,6 +62,7 @@ Partial Class Form1
         Me.lblCurrentRole = New System.Windows.Forms.Label()
         Me.TbManager = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.GetAdminPassButton = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GetAppsButton = New System.Windows.Forms.Button()
@@ -502,6 +503,7 @@ Partial Class Form1
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.GetAdminPassButton)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.GetAppsButton)
@@ -542,6 +544,15 @@ Partial Class Form1
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(656, 465)
         Me.Panel1.TabIndex = 56
+        '
+        'GetAdminPassButton
+        '
+        Me.GetAdminPassButton.Location = New System.Drawing.Point(569, 89)
+        Me.GetAdminPassButton.Name = "GetAdminPassButton"
+        Me.GetAdminPassButton.Size = New System.Drawing.Size(74, 35)
+        Me.GetAdminPassButton.TabIndex = 57
+        Me.GetAdminPassButton.Text = "Get Admin Pass"
+        Me.GetAdminPassButton.UseVisualStyleBackColor = True
         '
         'Label3
         '
@@ -1054,7 +1065,7 @@ Partial Class Form1
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         Me.ExitToolStripMenuItem.ToolTipText = "cya"
         '
@@ -1069,7 +1080,7 @@ Partial Class Form1
         '
         Me.AboutToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CreatedByArmanRamazyanToolStripMenuItem, Me.IfYouHaveAnyQuestionsToolStripMenuItem})
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
         Me.AboutToolStripMenuItem.Text = "About"
         '
         'CreatedByArmanRamazyanToolStripMenuItem
@@ -1101,14 +1112,14 @@ Partial Class Form1
         'DonateToolStripMenuItem
         '
         Me.DonateToolStripMenuItem.Name = "DonateToolStripMenuItem"
-        Me.DonateToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DonateToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
         Me.DonateToolStripMenuItem.Text = "Donate"
         Me.DonateToolStripMenuItem.ToolTipText = "If you like this app, please consider donating :)"
         '
         'WebsiteToolStripMenuItem
         '
         Me.WebsiteToolStripMenuItem.Name = "WebsiteToolStripMenuItem"
-        Me.WebsiteToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.WebsiteToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
         Me.WebsiteToolStripMenuItem.Text = "Website"
         '
         'ResultsBox
@@ -1299,4 +1310,5 @@ Partial Class Form1
     Friend WithEvents Label4 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents GetAdminPassButton As Button
 End Class
