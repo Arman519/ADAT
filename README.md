@@ -6,3 +6,6 @@ Important Notes: Does not require ADUC to be installed, Do not change the defaul
 
 Getting Started
 Download and Install Active Directory Admin Tool Installer.msi from the root ADAT git folder.
+
+Searching Computer Info
+![ttystudio GIF](http://g.recordit.co/KtVh9qm7DL.gif)
