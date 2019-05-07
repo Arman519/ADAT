@@ -573,7 +573,7 @@ Partial Class Form1
         '
         'GetAppsButton
         '
-        Me.GetAppsButton.Location = New System.Drawing.Point(330, 441)
+        Me.GetAppsButton.Location = New System.Drawing.Point(331, 442)
         Me.GetAppsButton.Name = "GetAppsButton"
         Me.GetAppsButton.Size = New System.Drawing.Size(115, 25)
         Me.GetAppsButton.TabIndex = 13
@@ -602,7 +602,7 @@ Partial Class Form1
         '
         'BtnCopyInfo
         '
-        Me.BtnCopyInfo.Location = New System.Drawing.Point(106, 435)
+        Me.BtnCopyInfo.Location = New System.Drawing.Point(106, 442)
         Me.BtnCopyInfo.Name = "BtnCopyInfo"
         Me.BtnCopyInfo.Size = New System.Drawing.Size(115, 25)
         Me.BtnCopyInfo.TabIndex = 6
@@ -1054,7 +1054,7 @@ Partial Class Form1
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(92, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         Me.ExitToolStripMenuItem.ToolTipText = "cya"
         '
@@ -1069,7 +1069,7 @@ Partial Class Form1
         '
         Me.AboutToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CreatedByArmanRamazyanToolStripMenuItem, Me.IfYouHaveAnyQuestionsToolStripMenuItem})
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AboutToolStripMenuItem.Text = "About"
         '
         'CreatedByArmanRamazyanToolStripMenuItem
@@ -1101,14 +1101,14 @@ Partial Class Form1
         'DonateToolStripMenuItem
         '
         Me.DonateToolStripMenuItem.Name = "DonateToolStripMenuItem"
-        Me.DonateToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
+        Me.DonateToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.DonateToolStripMenuItem.Text = "Donate"
         Me.DonateToolStripMenuItem.ToolTipText = "If you like this app, please consider donating :)"
         '
         'WebsiteToolStripMenuItem
         '
         Me.WebsiteToolStripMenuItem.Name = "WebsiteToolStripMenuItem"
-        Me.WebsiteToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
+        Me.WebsiteToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.WebsiteToolStripMenuItem.Text = "Website"
         '
         'ResultsBox

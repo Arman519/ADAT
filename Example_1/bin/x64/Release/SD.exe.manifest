@@ -43,26 +43,6 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="Microsoft.Management.Infrastructure" version="1.0.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="Microsoft.Management.Infrastructure.Native" version="1.0.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="amd64" />
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="Microsoft.WSMan.Management" version="3.0.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="Microsoft.WSMan.Runtime" version="3.0.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
-    </dependentAssembly>
-  </dependency>
-  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.PowerShell.Commands.Management.dll" size="586752">
       <assemblyIdentity name="Microsoft.PowerShell.Commands.Management" version="3.0.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -111,14 +91,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SD.exe" size="1570824">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SD.exe" size="1197576">
       <assemblyIdentity name="SD" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>QNgYuAOALDoxVNWXCeamElg5OO4KZYb8oORPPgpCFk8=</dsig:DigestValue>
+        <dsig:DigestValue>RZnsbv1+BUa6O2veJuZu29//otkFjCNDKA8VMXoCb0A=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -135,14 +115,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Management.Automation.Resources.dll" size="474112">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Management.Automation.Resources.dll" size="474624">
       <assemblyIdentity name="System.Management.Automation.resources" version="3.0.0.0" publicKeyToken="31BF3856AD364E35" language="en" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>pG1VgXmh+4/Fq45dvYElS8wQGevHo+qectL2uO27wro=</dsig:DigestValue>
+        <dsig:DigestValue>XZD64EiH5BO21VMYMLiwKGZJ7ics+qN36JOblWPY6GY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -153,6 +133,33 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>1BMwUJbJh13KeVjG6EIrtVq27+YILA+Pni4D/+MVKxs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\lockoutstatus.exe" size="52224">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>lp1nefCkwdiYGpcu+zpx4IESVLTWMWp2iXwgu0UP7fQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\ticket_data.csv" size="921">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>fv1+3coWhwzqBvxVVMKfAQLrbv3JbqLeOvmpcLJ71qo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\usercomputer_data.csv" size="164">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Ou6wMyS1yw6HeWlYMzlfrx4SfKPenNKFnqxtKfMs07E=</dsig:DigestValue>
     </hash>
   </file>
   <file name="SD.exe.config" size="1709">

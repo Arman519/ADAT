@@ -133,7 +133,7 @@ Public Class Form1
     Private Function GetGroupMembers()
         Dim Script As New StringBuilder()
         Script.Append("Import-Module ActiveDirectory" + vbCrLf)
-        Script.Append("Get-ADPrincipalGroupMembership adm-arman.ramazyan | select name -Verbose" + vbCrLf)
+        Script.Append("Get-ADPrincipalGroupMembership " + TbUserID.Text.ToString + " | select name -Verbose" + vbCrLf)
         Return Script.ToString()
     End Function
 
@@ -144,10 +144,7 @@ Public Class Form1
     Private Function GetApps()
         Dim Script As New StringBuilder()
         Script.Append("# Get-InstalledApp.ps1" + vbCrLf)
-        Script.Append("# Written by Bill Stewart (bstewart@iname.com)" + vbCrLf)
-        Script.Append("#" + vbCrLf)
-        Script.Append("# Outputs installed applications on one or more computers that match one or" + vbCrLf)
-        Script.Append("# more criteria." + vbCrLf)
+        Script.Append("# Outputs installed applications" + vbCrLf)
         Script.Append("" + vbCrLf)
         Script.Append("param([String[]] $ComputerName," + vbCrLf)
         Script.Append("      [String] $AppID," + vbCrLf)
@@ -731,12 +728,12 @@ Public Class Form1
         Dim Script As New StringBuilder()
         Dim EmployeeName As String = TbUserID.Text
         Script.Append("$EmployeeNumber = " + Chr(34) + EmployeeName + Chr(34) + vbCrLf)
-        ' The old way: Script.Append("$EmployeeNumber = (Import-csv " + Chr(34) + "C:\Service Desk Ticketing Tool\Data\ticket_data.csv" + Chr(34) + ").AffectedUser" + vbCrLf)
         Script.Append("$program = " + Chr(34) + "C:\Program Files\Active Directory Admin Tool\Apps\lockoutstatus.exe" + Chr(34) + "" + vbCrLf)
         Script.Append("$programArgs = " + Chr(34) + "-u:$EmployeeNumber@$env:USERDNSDOMAIN" + Chr(34) + "" + vbCrLf)
         Script.Append("Invoke-Command -ScriptBlock { & $program $programArgs }" + vbCrLf)
         Return Script.ToString()
     End Function
+
 
 
     'Search Computer button - gets computer info using powershell
