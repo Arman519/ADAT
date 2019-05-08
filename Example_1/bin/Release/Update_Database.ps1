@@ -1,2 +1,0 @@
-﻿Copy-Item "\\jtclpswsccm01.lpsvcs.com\apps$\ServiceDesk Ticketing Tool\Service Desk Ticketing Tool\EHD Ticket Tool data.xlsx" -Destination "C:\Service Desk Ticketing Tool\EHD Ticket Tool data.xlsx"
-Write-Host "Database Updated"

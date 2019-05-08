@@ -1,1 +1,0 @@
-start powershell.exe -ExecutionPolicy Bypass .\Update_Database.ps1
