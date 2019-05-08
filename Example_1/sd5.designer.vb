@@ -742,7 +742,7 @@ Partial Class Form1
         Me.KBValue.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.KBValue.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.KBValue.ForeColor = System.Drawing.Color.Black
-        Me.KBValue.Location = New System.Drawing.Point(117, 169)
+        Me.KBValue.Location = New System.Drawing.Point(117, 172)
         Me.KBValue.Name = "KBValue"
         Me.KBValue.ReadOnly = True
         Me.KBValue.Size = New System.Drawing.Size(100, 13)
@@ -754,7 +754,7 @@ Partial Class Form1
         Me.WcryValue.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.WcryValue.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.WcryValue.ForeColor = System.Drawing.Color.Black
-        Me.WcryValue.Location = New System.Drawing.Point(70, 169)
+        Me.WcryValue.Location = New System.Drawing.Point(70, 172)
         Me.WcryValue.Name = "WcryValue"
         Me.WcryValue.ReadOnly = True
         Me.WcryValue.Size = New System.Drawing.Size(236, 13)
@@ -763,7 +763,7 @@ Partial Class Form1
         'WcryLabel
         '
         Me.WcryLabel.AutoSize = True
-        Me.WcryLabel.Location = New System.Drawing.Point(33, 168)
+        Me.WcryLabel.Location = New System.Drawing.Point(32, 171)
         Me.WcryLabel.Name = "WcryLabel"
         Me.WcryLabel.Size = New System.Drawing.Size(35, 13)
         Me.WcryLabel.TabIndex = 90
@@ -889,7 +889,7 @@ Partial Class Form1
         'ModelLabel
         '
         Me.ModelLabel.AutoSize = True
-        Me.ModelLabel.Location = New System.Drawing.Point(29, 28)
+        Me.ModelLabel.Location = New System.Drawing.Point(28, 28)
         Me.ModelLabel.Name = "ModelLabel"
         Me.ModelLabel.Size = New System.Drawing.Size(39, 13)
         Me.ModelLabel.TabIndex = 24
@@ -898,7 +898,7 @@ Partial Class Form1
         'SerialLabel
         '
         Me.SerialLabel.AutoSize = True
-        Me.SerialLabel.Location = New System.Drawing.Point(32, 43)
+        Me.SerialLabel.Location = New System.Drawing.Point(31, 43)
         Me.SerialLabel.Name = "SerialLabel"
         Me.SerialLabel.Size = New System.Drawing.Size(36, 13)
         Me.SerialLabel.TabIndex = 25
@@ -907,7 +907,7 @@ Partial Class Form1
         'OSLabel
         '
         Me.OSLabel.AutoSize = True
-        Me.OSLabel.Location = New System.Drawing.Point(43, 58)
+        Me.OSLabel.Location = New System.Drawing.Point(42, 58)
         Me.OSLabel.Name = "OSLabel"
         Me.OSLabel.Size = New System.Drawing.Size(25, 13)
         Me.OSLabel.TabIndex = 26
@@ -916,7 +916,7 @@ Partial Class Form1
         'CPULabel
         '
         Me.CPULabel.AutoSize = True
-        Me.CPULabel.Location = New System.Drawing.Point(36, 73)
+        Me.CPULabel.Location = New System.Drawing.Point(35, 73)
         Me.CPULabel.Name = "CPULabel"
         Me.CPULabel.Size = New System.Drawing.Size(32, 13)
         Me.CPULabel.TabIndex = 27
@@ -925,7 +925,7 @@ Partial Class Form1
         'MemoryLabel
         '
         Me.MemoryLabel.AutoSize = True
-        Me.MemoryLabel.Location = New System.Drawing.Point(21, 88)
+        Me.MemoryLabel.Location = New System.Drawing.Point(20, 88)
         Me.MemoryLabel.Name = "MemoryLabel"
         Me.MemoryLabel.Size = New System.Drawing.Size(47, 13)
         Me.MemoryLabel.TabIndex = 28
@@ -934,7 +934,7 @@ Partial Class Form1
         'HDFreeLabel
         '
         Me.HDFreeLabel.AutoSize = True
-        Me.HDFreeLabel.Location = New System.Drawing.Point(18, 103)
+        Me.HDFreeLabel.Location = New System.Drawing.Point(17, 103)
         Me.HDFreeLabel.Name = "HDFreeLabel"
         Me.HDFreeLabel.Size = New System.Drawing.Size(50, 13)
         Me.HDFreeLabel.TabIndex = 29
@@ -943,7 +943,7 @@ Partial Class Form1
         'HDTotalLabel
         '
         Me.HDTotalLabel.AutoSize = True
-        Me.HDTotalLabel.Location = New System.Drawing.Point(15, 118)
+        Me.HDTotalLabel.Location = New System.Drawing.Point(14, 118)
         Me.HDTotalLabel.Name = "HDTotalLabel"
         Me.HDTotalLabel.Size = New System.Drawing.Size(53, 13)
         Me.HDTotalLabel.TabIndex = 30
@@ -1054,7 +1054,7 @@ Partial Class Form1
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(92, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         Me.ExitToolStripMenuItem.ToolTipText = "cya"
         '
@@ -1069,7 +1069,7 @@ Partial Class Form1
         '
         Me.AboutToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CreatedByArmanRamazyanToolStripMenuItem, Me.IfYouHaveAnyQuestionsToolStripMenuItem})
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
         Me.AboutToolStripMenuItem.Text = "About"
         '
         'CreatedByArmanRamazyanToolStripMenuItem
@@ -1101,14 +1101,14 @@ Partial Class Form1
         'DonateToolStripMenuItem
         '
         Me.DonateToolStripMenuItem.Name = "DonateToolStripMenuItem"
-        Me.DonateToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.DonateToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
         Me.DonateToolStripMenuItem.Text = "Donate"
         Me.DonateToolStripMenuItem.ToolTipText = "If you like this app, please consider donating :)"
         '
         'WebsiteToolStripMenuItem
         '
         Me.WebsiteToolStripMenuItem.Name = "WebsiteToolStripMenuItem"
-        Me.WebsiteToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.WebsiteToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
         Me.WebsiteToolStripMenuItem.Text = "Website"
         '
         'ResultsBox

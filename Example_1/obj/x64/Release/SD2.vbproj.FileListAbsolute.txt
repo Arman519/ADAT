@@ -13,7 +13,6 @@ C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\bin\x64\Release\System.M
 C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\bin\x64\Release\System.Management.Automation.Resources.dll
 C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\obj\x64\Release\SD2.vbprojResolveAssemblyReference.cache
 C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\obj\x64\Release\SD2.vbproj.ResolveComReference.cache
-C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\obj\x64\Release\SD1.AdminPass.resources
 C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\obj\x64\Release\SD1.InstalledApps.resources
 C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\obj\x64\Release\SD1.Resources.resources
 C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\obj\x64\Release\SD1.Form1.resources
@@ -52,3 +51,6 @@ P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\obj\x64\Release\SD.pdb
 P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\bin\x64\Release\Resources\ticket_data.csv
 P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\bin\x64\Release\Resources\usercomputer_data.csv
 P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\bin\x64\Release\Resources\lockoutstatus.exe
+C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\bin\x64\Release\Resources\ticket_data.csv
+C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\bin\x64\Release\Resources\usercomputer_data.csv
+C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\bin\x64\Release\Resources\lockoutstatus.exe

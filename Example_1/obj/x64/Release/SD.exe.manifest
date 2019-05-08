@@ -43,6 +43,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Management.Infrastructure" version="1.0.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Management.Infrastructure.Native" version="1.0.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="amd64" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.WSMan.Management" version="3.0.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.WSMan.Runtime" version="3.0.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.PowerShell.Commands.Management.dll" size="586752">
       <assemblyIdentity name="Microsoft.PowerShell.Commands.Management" version="3.0.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -98,7 +118,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>+umJlo/48n4i+cpvNYQyFUJQJKROxP/QfsBd5R996oA=</dsig:DigestValue>
+        <dsig:DigestValue>Q3tAur2cf8F71Ootnx5yyaWEDPDQGLsF3KUoW9Jgq0Q=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -115,14 +135,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Management.Automation.Resources.dll" size="474624">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Management.Automation.Resources.dll" size="474112">
       <assemblyIdentity name="System.Management.Automation.resources" version="3.0.0.0" publicKeyToken="31BF3856AD364E35" language="en" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>XZD64EiH5BO21VMYMLiwKGZJ7ics+qN36JOblWPY6GY=</dsig:DigestValue>
+        <dsig:DigestValue>pG1VgXmh+4/Fq45dvYElS8wQGevHo+qectL2uO27wro=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
