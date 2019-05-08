@@ -62,7 +62,8 @@ Partial Class Form1
         Me.lblCurrentRole = New System.Windows.Forms.Label()
         Me.TbManager = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.lblGroupMemberships = New System.Windows.Forms.Label()
+        Me.TBADGroupMemberships = New System.Windows.Forms.RichTextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GetAppsButton = New System.Windows.Forms.Button()
         Me.BtnLockout = New System.Windows.Forms.Button()
@@ -100,7 +101,6 @@ Partial Class Form1
         Me.HDTotalLabel = New System.Windows.Forms.Label()
         Me.SubnetLabel = New System.Windows.Forms.Label()
         Me.lblUserDN = New System.Windows.Forms.Label()
-        Me.ComputerList = New System.Windows.Forms.ListBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.NewUser = New System.Windows.Forms.Button()
         Me.Label15 = New System.Windows.Forms.Label()
@@ -175,24 +175,24 @@ Partial Class Form1
         Me.ListView1.MultiSelect = False
         Me.ListView1.Name = "ListView1"
         Me.ListView1.Size = New System.Drawing.Size(309, 140)
-        Me.ListView1.TabIndex = 11
+        Me.ListView1.TabIndex = 18
         Me.ListView1.UseCompatibleStateImageBehavior = False
         Me.ListView1.View = System.Windows.Forms.View.Details
         '
         'clmName
         '
         Me.clmName.Text = "Name"
-        Me.clmName.Width = 110
+        Me.clmName.Width = 87
         '
         'chType
         '
         Me.chType.Text = "Object Type"
-        Me.chType.Width = 95
+        Me.chType.Width = 79
         '
         'chSAM
         '
         Me.chSAM.Text = "User Name"
-        Me.chSAM.Width = 124
+        Me.chSAM.Width = 138
         '
         'gbTelephone
         '
@@ -284,7 +284,7 @@ Partial Class Form1
         Me.TbAddress.Name = "TbAddress"
         Me.TbAddress.ReadOnly = True
         Me.TbAddress.Size = New System.Drawing.Size(245, 13)
-        Me.TbAddress.TabIndex = 13
+        Me.TbAddress.TabIndex = 23
         '
         'UserAddress
         '
@@ -303,7 +303,7 @@ Partial Class Form1
         Me.TbEmail.Name = "TbEmail"
         Me.TbEmail.ReadOnly = True
         Me.TbEmail.Size = New System.Drawing.Size(245, 13)
-        Me.TbEmail.TabIndex = 11
+        Me.TbEmail.TabIndex = 19
         '
         'TbIPPhone
         '
@@ -313,7 +313,7 @@ Partial Class Form1
         Me.TbIPPhone.Name = "TbIPPhone"
         Me.TbIPPhone.ReadOnly = True
         Me.TbIPPhone.Size = New System.Drawing.Size(245, 13)
-        Me.TbIPPhone.TabIndex = 9
+        Me.TbIPPhone.TabIndex = 22
         '
         'Label11
         '
@@ -332,7 +332,7 @@ Partial Class Form1
         Me.TbMobile.Name = "TbMobile"
         Me.TbMobile.ReadOnly = True
         Me.TbMobile.Size = New System.Drawing.Size(245, 13)
-        Me.TbMobile.TabIndex = 7
+        Me.TbMobile.TabIndex = 21
         '
         'TbHome
         '
@@ -342,7 +342,7 @@ Partial Class Form1
         Me.TbHome.Name = "TbHome"
         Me.TbHome.ReadOnly = True
         Me.TbHome.Size = New System.Drawing.Size(245, 13)
-        Me.TbHome.TabIndex = 5
+        Me.TbHome.TabIndex = 20
         '
         'lblIPPhone
         '
@@ -388,7 +388,7 @@ Partial Class Form1
         Me.rtbDescription.Name = "rtbDescription"
         Me.rtbDescription.ReadOnly = True
         Me.rtbDescription.Size = New System.Drawing.Size(319, 122)
-        Me.rtbDescription.TabIndex = 34
+        Me.rtbDescription.TabIndex = 16
         Me.rtbDescription.Text = ""
         '
         'lblConjunction
@@ -502,7 +502,8 @@ Partial Class Form1
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.lblGroupMemberships)
+        Me.Panel1.Controls.Add(Me.TBADGroupMemberships)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.GetAppsButton)
         Me.Panel1.Controls.Add(Me.BtnLockout)
@@ -518,7 +519,6 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.lblUserDN)
         Me.Panel1.Controls.Add(Me.gbTelephone)
         Me.Panel1.Controls.Add(Me.BtnSearch)
-        Me.Panel1.Controls.Add(Me.ComputerList)
         Me.Panel1.Controls.Add(Me.lblConjunction)
         Me.Panel1.Controls.Add(Me.TbLast)
         Me.Panel1.Controls.Add(Me.lblLocked)
@@ -540,23 +540,32 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.Label32)
         Me.Panel1.Location = New System.Drawing.Point(0, 29)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(656, 465)
+        Me.Panel1.Size = New System.Drawing.Size(656, 479)
         Me.Panel1.TabIndex = 56
         '
-        'Label3
+        'lblGroupMemberships
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(326, 171)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(92, 13)
-        Me.Label3.TabIndex = 56
-        Me.Label3.Text = "User's Computers:"
+        Me.lblGroupMemberships.AutoSize = True
+        Me.lblGroupMemberships.Location = New System.Drawing.Point(327, 125)
+        Me.lblGroupMemberships.Name = "lblGroupMemberships"
+        Me.lblGroupMemberships.Size = New System.Drawing.Size(104, 13)
+        Me.lblGroupMemberships.TabIndex = 58
+        Me.lblGroupMemberships.Text = "Group Memberships:"
+        '
+        'TBADGroupMemberships
+        '
+        Me.TBADGroupMemberships.BackColor = System.Drawing.SystemColors.Window
+        Me.TBADGroupMemberships.Location = New System.Drawing.Point(328, 140)
+        Me.TBADGroupMemberships.Name = "TBADGroupMemberships"
+        Me.TBADGroupMemberships.Size = New System.Drawing.Size(314, 59)
+        Me.TBADGroupMemberships.TabIndex = 10
+        Me.TBADGroupMemberships.Text = ""
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.ForeColor = System.Drawing.Color.DimGray
-        Me.Label2.Location = New System.Drawing.Point(328, 146)
+        Me.Label2.Location = New System.Drawing.Point(328, 227)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(84, 13)
         Me.Label2.TabIndex = 55
@@ -564,10 +573,10 @@ Partial Class Form1
         '
         'GetAppsButton
         '
-        Me.GetAppsButton.Location = New System.Drawing.Point(330, 436)
+        Me.GetAppsButton.Location = New System.Drawing.Point(331, 442)
         Me.GetAppsButton.Name = "GetAppsButton"
         Me.GetAppsButton.Size = New System.Drawing.Size(115, 25)
-        Me.GetAppsButton.TabIndex = 54
+        Me.GetAppsButton.TabIndex = 13
         Me.GetAppsButton.Tag = "Copy to Clipboard"
         Me.GetAppsButton.Text = "Get Installed Apps"
         Me.GetAppsButton.UseVisualStyleBackColor = True
@@ -578,22 +587,22 @@ Partial Class Form1
         Me.BtnLockout.Location = New System.Drawing.Point(328, 90)
         Me.BtnLockout.Name = "BtnLockout"
         Me.BtnLockout.Size = New System.Drawing.Size(72, 34)
-        Me.BtnLockout.TabIndex = 53
+        Me.BtnLockout.TabIndex = 7
         Me.BtnLockout.Text = "Lockout Report"
         Me.BtnLockout.UseVisualStyleBackColor = True
         '
         'SearchComputer
         '
-        Me.SearchComputer.Location = New System.Drawing.Point(568, 132)
+        Me.SearchComputer.Location = New System.Drawing.Point(568, 204)
         Me.SearchComputer.Name = "SearchComputer"
         Me.SearchComputer.Size = New System.Drawing.Size(74, 36)
-        Me.SearchComputer.TabIndex = 10
+        Me.SearchComputer.TabIndex = 12
         Me.SearchComputer.Text = "Computer Search"
         Me.SearchComputer.UseVisualStyleBackColor = True
         '
         'BtnCopyInfo
         '
-        Me.BtnCopyInfo.Location = New System.Drawing.Point(106, 435)
+        Me.BtnCopyInfo.Location = New System.Drawing.Point(106, 442)
         Me.BtnCopyInfo.Name = "BtnCopyInfo"
         Me.BtnCopyInfo.Size = New System.Drawing.Size(115, 25)
         Me.BtnCopyInfo.TabIndex = 6
@@ -603,10 +612,10 @@ Partial Class Form1
         '
         'BtnCopyDetails
         '
-        Me.BtnCopyDetails.Location = New System.Drawing.Point(527, 435)
+        Me.BtnCopyDetails.Location = New System.Drawing.Point(527, 442)
         Me.BtnCopyDetails.Name = "BtnCopyDetails"
         Me.BtnCopyDetails.Size = New System.Drawing.Size(115, 25)
-        Me.BtnCopyDetails.TabIndex = 13
+        Me.BtnCopyDetails.TabIndex = 14
         Me.BtnCopyDetails.Tag = "Copy to Clipboard"
         Me.BtnCopyDetails.Text = "Copy Computer Info"
         Me.BtnCopyDetails.UseVisualStyleBackColor = True
@@ -624,10 +633,10 @@ Partial Class Form1
         'SelectedComputer
         '
         Me.SelectedComputer.BackColor = System.Drawing.SystemColors.Window
-        Me.SelectedComputer.Location = New System.Drawing.Point(419, 141)
+        Me.SelectedComputer.Location = New System.Drawing.Point(419, 213)
         Me.SelectedComputer.Name = "SelectedComputer"
         Me.SelectedComputer.Size = New System.Drawing.Size(143, 20)
-        Me.SelectedComputer.TabIndex = 6
+        Me.SelectedComputer.TabIndex = 11
         '
         'ManagerLabel
         '
@@ -668,7 +677,7 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.SubnetLabel)
         Me.GroupBox1.Location = New System.Drawing.Point(331, 246)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(311, 184)
+        Me.GroupBox1.Size = New System.Drawing.Size(311, 193)
         Me.GroupBox1.TabIndex = 18
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Computer Details:"
@@ -960,15 +969,6 @@ Partial Class Form1
         Me.lblUserDN.TabIndex = 21
         Me.lblUserDN.Text = "         "
         '
-        'ComputerList
-        '
-        Me.ComputerList.BackColor = System.Drawing.SystemColors.Window
-        Me.ComputerList.FormattingEnabled = True
-        Me.ComputerList.Location = New System.Drawing.Point(419, 171)
-        Me.ComputerList.Name = "ComputerList"
-        Me.ComputerList.Size = New System.Drawing.Size(224, 69)
-        Me.ComputerList.TabIndex = 11
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -983,7 +983,7 @@ Partial Class Form1
         Me.NewUser.Location = New System.Drawing.Point(13, 87)
         Me.NewUser.Name = "NewUser"
         Me.NewUser.Size = New System.Drawing.Size(88, 29)
-        Me.NewUser.TabIndex = 40
+        Me.NewUser.TabIndex = 4
         Me.NewUser.Text = "New User"
         Me.NewUser.UseVisualStyleBackColor = True
         '
@@ -999,7 +999,7 @@ Partial Class Form1
         'Label29
         '
         Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(328, 132)
+        Me.Label29.Location = New System.Drawing.Point(328, 213)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(86, 13)
         Me.Label29.TabIndex = 13
@@ -1021,7 +1021,7 @@ Partial Class Form1
         Me.rtbNotes.Name = "rtbNotes"
         Me.rtbNotes.ReadOnly = True
         Me.rtbNotes.Size = New System.Drawing.Size(319, 120)
-        Me.rtbNotes.TabIndex = 33
+        Me.rtbNotes.TabIndex = 17
         Me.rtbNotes.Text = ""
         '
         'Label1
@@ -1040,7 +1040,7 @@ Partial Class Form1
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.MenuStrip1.Size = New System.Drawing.Size(1002, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1001, 24)
         Me.MenuStrip1.TabIndex = 77
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -1054,7 +1054,7 @@ Partial Class Form1
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         Me.ExitToolStripMenuItem.ToolTipText = "cya"
         '
@@ -1069,7 +1069,7 @@ Partial Class Form1
         '
         Me.AboutToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CreatedByArmanRamazyanToolStripMenuItem, Me.IfYouHaveAnyQuestionsToolStripMenuItem})
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AboutToolStripMenuItem.Text = "About"
         '
         'CreatedByArmanRamazyanToolStripMenuItem
@@ -1101,14 +1101,14 @@ Partial Class Form1
         'DonateToolStripMenuItem
         '
         Me.DonateToolStripMenuItem.Name = "DonateToolStripMenuItem"
-        Me.DonateToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DonateToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.DonateToolStripMenuItem.Text = "Donate"
         Me.DonateToolStripMenuItem.ToolTipText = "If you like this app, please consider donating :)"
         '
         'WebsiteToolStripMenuItem
         '
         Me.WebsiteToolStripMenuItem.Name = "WebsiteToolStripMenuItem"
-        Me.WebsiteToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.WebsiteToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.WebsiteToolStripMenuItem.Text = "Website"
         '
         'ResultsBox
@@ -1152,7 +1152,7 @@ Partial Class Form1
         Me.ListView2.Name = "ListView2"
         Me.ListView2.Size = New System.Drawing.Size(319, 145)
         Me.ListView2.Sorting = System.Windows.Forms.SortOrder.Ascending
-        Me.ListView2.TabIndex = 32
+        Me.ListView2.TabIndex = 15
         Me.ListView2.UseCompatibleStateImageBehavior = False
         Me.ListView2.View = System.Windows.Forms.View.Details
         '
@@ -1169,7 +1169,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1002, 511)
+        Me.ClientSize = New System.Drawing.Size(1001, 511)
         Me.Controls.Add(Me.AccountNotesLabel)
         Me.Controls.Add(Me.ResultsBox)
         Me.Controls.Add(Me.Label4)
@@ -1239,7 +1239,6 @@ Partial Class Form1
     Friend WithEvents SerialLabel As Label
     Friend WithEvents ModelLabel As Label
     Friend WithEvents SelectedComputer As TextBox
-    Friend WithEvents ComputerList As ListBox
     Friend WithEvents Label29 As Label
     Friend WithEvents Label32 As Label
     Friend WithEvents TbEmail As TextBox
@@ -1298,5 +1297,6 @@ Partial Class Form1
     Friend WithEvents ListView2 As ListView
     Friend WithEvents Label4 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
+    Friend WithEvents TBADGroupMemberships As RichTextBox
+    Friend WithEvents lblGroupMemberships As Label
 End Class

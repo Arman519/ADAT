@@ -28,7 +28,6 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         TbUserID.Clear()
-        ComputerList.Items.Clear()
         SelectedComputer.Clear()
         TbEmail.Clear()
         TbHome.Clear()
@@ -42,20 +41,6 @@ Public Class Form1
         rtbDescription.Clear()
         TbUserID.Focus()
     End Sub
-
-
-
-
-    'Get LAPS UI Pass
-    Private Function GetAdminPass()
-        Dim Script As New StringBuilder()
-        Script.Append("$id = " + Chr(34) + SelectedComputer.Text + Chr(34) + vbCrLf)
-        Script.Append("$ComputerName = $id" + vbCrLf)
-        Script.Append("$getpass = Get-AdmPwdPassword –Computername $id" + vbCrLf)
-        Script.Append("$getpass.Password" + vbCrLf)
-        Return Script.ToString()
-    End Function
-
 
     'Gets Selected Computer info Powershell script
     Private Function GetUserComputerSelected()
@@ -144,14 +129,22 @@ Public Class Form1
         Return Script.ToString()
     End Function
 
+    'Get Members Script
+    Private Function GetGroupMembers()
+        Dim Script As New StringBuilder()
+        Script.Append("Import-Module ActiveDirectory" + vbCrLf)
+        Script.Append("Get-ADPrincipalGroupMembership " + TbUserID.Text.ToString + " | select name -Verbose" + vbCrLf)
+        Return Script.ToString()
+    End Function
+
+
+
+
     'Get apps script
     Private Function GetApps()
         Dim Script As New StringBuilder()
         Script.Append("# Get-InstalledApp.ps1" + vbCrLf)
-        Script.Append("# Written by Bill Stewart (bstewart@iname.com)" + vbCrLf)
-        Script.Append("#" + vbCrLf)
-        Script.Append("# Outputs installed applications on one or more computers that match one or" + vbCrLf)
-        Script.Append("# more criteria." + vbCrLf)
+        Script.Append("# Outputs installed applications" + vbCrLf)
         Script.Append("" + vbCrLf)
         Script.Append("param([String[]] $ComputerName," + vbCrLf)
         Script.Append("      [String] $AppID," + vbCrLf)
@@ -323,20 +316,10 @@ Public Class Form1
         End If
     End Sub
 
-    'After Selecting a Computer from the list, this will fill the Computer Name field and trigger the Computer Search button
-    Private Sub ComputerList_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComputerList.SelectedIndexChanged
-        Hourglass(True)
-        SelectedComputer.Text = ComputerList.SelectedItem
-
-        Hourglass(False)
-        Call SearchComputer_Click(sender, e)
-
-    End Sub
 
     'search user button!! this is where you search for the user in active directory
     Private Sub BtnSearch_Click(sender As System.Object, e As EventArgs) Handles BtnSearch.Click
         Hourglass(True) 'Calls the sub to turn on the wait cursor.
-        ComputerList.Items.Clear() 'Clears the computer list box
         ListView1.Items.Clear() 'Clear the items from the previous search.  
 
         Using Root As New DirectoryEntry 'Establish connection to current loged on users Active Directory
@@ -535,24 +518,18 @@ Public Class Form1
         End Using 'Close the directory entry to the user object
 
         Hourglass(False)
+        'enable the AD management buttons
         BtnLockout.Enabled = True
         UnlockButton.Enabled = True
 
-        Hourglass(True)
         Try
-            ResultsBox.Text = RunScript(GetUserComputerSelected).ToString() 'runs powershell script to get computer info
-
-            Using sr As New StreamReader("C:\Program Files\Active Directory Admin Tool\Data\PI_Computers.csv")
-                sr.ReadLine.Split(","c)
-                While Not sr.EndOfStream
-                    Dim newline() As String = sr.ReadLine.Split(","c)
-                    ComputerList.Items.Add(newline(1).ToString)
-
-                End While
-                sr.Close()
-            End Using
+            TBADGroupMemberships.Text = RunScript(GetGroupMembers).ToString() 'runs powershell script to get user group membership
+            TBADGroupMemberships.Text = TBADGroupMemberships.Text.Replace("@{name=", "")
+            TBADGroupMemberships.Text = TBADGroupMemberships.Text.Replace("}", "")
         Catch
         End Try
+
+        Hourglass(True)
         GC.Collect()
         GC.WaitForPendingFinalizers()
         Hourglass(False)
@@ -640,7 +617,6 @@ Public Class Form1
         rtbNotes.Clear()
         ListView1.Items.Clear()
         ListView2.Items.Clear()
-        ComputerList.Items.Clear()
         TbManager.Clear()
         TbUserID.Focus()
         ModelValue.Clear()
@@ -667,8 +643,10 @@ Public Class Form1
         lblCRole.Text = ""
         lblCDepartment.Text = ""
         ResultsBox.Clear()
+        TBADGroupMemberships.Clear()
         BtnLockout.Enabled = False
         UnlockButton.Enabled = False
+
 
     End Sub
 
@@ -750,12 +728,12 @@ Public Class Form1
         Dim Script As New StringBuilder()
         Dim EmployeeName As String = TbUserID.Text
         Script.Append("$EmployeeNumber = " + Chr(34) + EmployeeName + Chr(34) + vbCrLf)
-        ' The old way: Script.Append("$EmployeeNumber = (Import-csv " + Chr(34) + "C:\Service Desk Ticketing Tool\Data\ticket_data.csv" + Chr(34) + ").AffectedUser" + vbCrLf)
         Script.Append("$program = " + Chr(34) + "C:\Program Files\Active Directory Admin Tool\Apps\lockoutstatus.exe" + Chr(34) + "" + vbCrLf)
         Script.Append("$programArgs = " + Chr(34) + "-u:$EmployeeNumber@$env:USERDNSDOMAIN" + Chr(34) + "" + vbCrLf)
         Script.Append("Invoke-Command -ScriptBlock { & $program $programArgs }" + vbCrLf)
         Return Script.ToString()
     End Function
+
 
 
     'Search Computer button - gets computer info using powershell
@@ -834,21 +812,22 @@ Public Class Form1
 
         Try
             InstalledApps.InstalledAppsRtb.Text = RunScript(GetApps).ToString() 'runs powershell script to get apps
+            InstalledApps.InstalledAppsRtb.Text = InstalledApps.InstalledAppsRtb.Text.Replace("@{AppName=", "")
+            InstalledApps.InstalledAppsRtb.Text = InstalledApps.InstalledAppsRtb.Text.Replace("}", "")
         Catch
         End Try
         Hourglass(False)
     End Sub
 
     Private Sub WebsiteToolStripMenuItem_Click_1(sender As Object, e As EventArgs) Handles WebsiteToolStripMenuItem.Click
-        Process.Start("http://www.rm519.com")
+        Process.Start("https://github.com/Arman519/ADAT")
     End Sub
 
-    Private Sub GetAdminPassButton_Click(sender As Object, e As EventArgs) 
+    Private Sub ListGroupMembersButton_Click(sender As Object, e As EventArgs)
         Hourglass(True)
-        AdminPass.Show()
 
         Try
-            AdminPass.AdminPassText.Text = RunScript(GetAdminPass).ToString() 'runs powershell script to get admin pass
+            TBADGroupMemberships.Text = RunScript(GetGroupMembers).ToString() 'runs powershell script to get user group memberships
         Catch
         End Try
         Hourglass(False)

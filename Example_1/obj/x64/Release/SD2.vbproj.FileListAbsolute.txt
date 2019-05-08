@@ -1,8 +1,3 @@
-P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\obj\x64\Release\SD2.vbprojAssemblyReference.cache
-P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\obj\x64\Release\SD2.vbproj.ResolveComReference.cache
-P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\obj\x64\Release\SD.exe
-P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\obj\x64\Release\SD.xml
-P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\obj\x64\Release\SD.pdb
 C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\bin\x64\Release\syn.syn
 C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\bin\x64\Release\SD.exe.config
 C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\bin\x64\Release\SD.exe.manifest
@@ -28,3 +23,32 @@ C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\obj\x64\Release\SD.appli
 C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\obj\x64\Release\SD.exe
 C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\obj\x64\Release\SD.xml
 C:\Users\ooice\OneDrive\Documents\GitHub\ADAT\Example_1\obj\x64\Release\SD.pdb
+P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\obj\x64\Release\SD2.vbprojAssemblyReference.cache
+P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\obj\x64\Release\SD2.vbproj.ResolveComReference.cache
+P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\bin\x64\Release\syn.syn
+P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\bin\x64\Release\SD.exe.config
+P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\bin\x64\Release\SD.exe.manifest
+P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\bin\x64\Release\SD.application
+P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\bin\x64\Release\SD.exe
+P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\bin\x64\Release\SD.pdb
+P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\bin\x64\Release\SD.xml
+P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\bin\x64\Release\Microsoft.PowerShell.Commands.Management.dll
+P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\bin\x64\Release\Microsoft.PowerShell.Commands.Utility.dll
+P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\bin\x64\Release\Microsoft.PowerShell.ConsoleHost.dll
+P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\bin\x64\Release\Microsoft.PowerShell.Security.dll
+P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\bin\x64\Release\System.Management.Automation.dll
+P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\bin\x64\Release\System.Management.Automation.Resources.dll
+P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\obj\x64\Release\SD1.InstalledApps.resources
+P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\obj\x64\Release\SD1.Resources.resources
+P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\obj\x64\Release\SD1.Form1.resources
+P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\obj\x64\Release\SD2.vbproj.GenerateResource.cache
+P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\obj\x64\Release\SD2.vbproj.CoreCompileInputs.cache
+P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\obj\x64\Release\SD.exe.manifest
+P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\obj\x64\Release\SD.application
+P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\obj\x64\Release\SD2.vbproj.CopyComplete
+P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\obj\x64\Release\SD.exe
+P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\obj\x64\Release\SD.xml
+P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\obj\x64\Release\SD.pdb
+P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\bin\x64\Release\Resources\ticket_data.csv
+P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\bin\x64\Release\Resources\usercomputer_data.csv
+P:\IT\VS Data\Example_1 - Copy\Example_1\Example_1\bin\x64\Release\Resources\lockoutstatus.exe
