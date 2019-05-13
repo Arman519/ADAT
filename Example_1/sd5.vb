@@ -833,4 +833,9 @@ Public Class Form1
         Hourglass(False)
     End Sub
 
+    Private Sub BtnCopyMembers_Click(sender As Object, e As EventArgs) Handles BtnCopyMembers.Click
+        Dim str As String
+        str = TBADGroupMemberships.Text
+        Clipboard.SetText(str)
+    End Sub
 End Class

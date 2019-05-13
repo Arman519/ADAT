@@ -125,6 +125,7 @@ Partial Class Form1
         Me.clmEMail = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ListView2 = New System.Windows.Forms.ListView()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.BtnCopyMembers = New System.Windows.Forms.Button()
         Me.gbTelephone.SuspendLayout()
         CType(Me.pbUserImg, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -502,6 +503,7 @@ Partial Class Form1
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.BtnCopyMembers)
         Me.Panel1.Controls.Add(Me.lblGroupMemberships)
         Me.Panel1.Controls.Add(Me.TBADGroupMemberships)
         Me.Panel1.Controls.Add(Me.Label2)
@@ -1165,6 +1167,15 @@ Partial Class Form1
         Me.Label4.TabIndex = 12
         Me.Label4.Text = "Exchange Info:"
         '
+        'BtnCopyMembers
+        '
+        Me.BtnCopyMembers.Location = New System.Drawing.Point(500, 90)
+        Me.BtnCopyMembers.Name = "BtnCopyMembers"
+        Me.BtnCopyMembers.Size = New System.Drawing.Size(79, 34)
+        Me.BtnCopyMembers.TabIndex = 59
+        Me.BtnCopyMembers.Text = "Copy Memberships"
+        Me.BtnCopyMembers.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1299,4 +1310,5 @@ Partial Class Form1
     Friend WithEvents Label2 As Label
     Friend WithEvents TBADGroupMemberships As RichTextBox
     Friend WithEvents lblGroupMemberships As Label
+    Friend WithEvents BtnCopyMembers As Button
 End Class
