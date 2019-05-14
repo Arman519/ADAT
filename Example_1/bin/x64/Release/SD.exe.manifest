@@ -91,14 +91,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SD.exe" size="1198088">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SD.exe" size="1185288">
       <assemblyIdentity name="SD" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>2zdLDFY8omuBJj64R0jeaPBLhCTBIpT4bz+8DefMTWI=</dsig:DigestValue>
+        <dsig:DigestValue>9R67Ax1nzIw5cyHA8eeURpfLEBZvQrN8kWSJkBRQDk0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

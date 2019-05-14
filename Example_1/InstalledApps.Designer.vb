@@ -25,6 +25,7 @@ Partial Class InstalledApps
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(InstalledApps))
         Me.InstalledAppsRtb = New System.Windows.Forms.RichTextBox()
         Me.CloseButton = New System.Windows.Forms.Button()
+        Me.btnCopyAppList = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'InstalledAppsRtb
@@ -39,18 +40,28 @@ Partial Class InstalledApps
         '
         'CloseButton
         '
-        Me.CloseButton.Location = New System.Drawing.Point(232, 618)
+        Me.CloseButton.Location = New System.Drawing.Point(277, 618)
         Me.CloseButton.Name = "CloseButton"
         Me.CloseButton.Size = New System.Drawing.Size(84, 29)
         Me.CloseButton.TabIndex = 1
         Me.CloseButton.Text = "Close"
         Me.CloseButton.UseVisualStyleBackColor = True
         '
+        'btnCopyAppList
+        '
+        Me.btnCopyAppList.Location = New System.Drawing.Point(167, 618)
+        Me.btnCopyAppList.Name = "btnCopyAppList"
+        Me.btnCopyAppList.Size = New System.Drawing.Size(84, 29)
+        Me.btnCopyAppList.TabIndex = 2
+        Me.btnCopyAppList.Text = "Copy App List"
+        Me.btnCopyAppList.UseVisualStyleBackColor = True
+        '
         'InstalledApps
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(541, 659)
+        Me.Controls.Add(Me.btnCopyAppList)
         Me.Controls.Add(Me.CloseButton)
         Me.Controls.Add(Me.InstalledAppsRtb)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -62,4 +73,5 @@ Partial Class InstalledApps
 
     Friend WithEvents InstalledAppsRtb As RichTextBox
     Friend WithEvents CloseButton As Button
+    Friend WithEvents btnCopyAppList As Button
 End Class

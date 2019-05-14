@@ -24,5 +24,9 @@ Public Class InstalledApps
         Close()
     End Sub
 
-
+    Private Sub BtnCopyAppList_Click(sender As Object, e As EventArgs) Handles btnCopyAppList.Click
+        Dim str As String
+        str = InstalledAppsRtb.Text
+        Clipboard.SetText(str)
+    End Sub
 End Class

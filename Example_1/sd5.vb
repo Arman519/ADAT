@@ -45,7 +45,7 @@ Public Class Form1
     'Gets Selected Computer info Powershell script
     Private Function GetUserComputerSelected()
         Dim Script As New StringBuilder()
-        Script.Append("$id = " + Chr(34) + SelectedComputer.Text + Chr(34) + vbCrLf)
+        Script.Append(" $id = " + Chr(34) + SelectedComputer.Text + Chr(34) + vbCrLf)
         Script.Append("$ComputerName = $id" + vbCrLf)
         Script.Append(" $os = Get-WmiObject win32_operatingsystem -ComputerName $ComputerName -ErrorAction SilentlyContinue" + vbCrLf)
         Script.Append(" $computer = Get-WmiObject win32_computersystem -ComputerName $ComputerName -ErrorAction SilentlyContinue" + vbCrLf)
@@ -54,7 +54,7 @@ Public Class Form1
         Script.Append(" $network = gwmi Win32_NetworkAdapterConfiguration  -ComputerName $ComputerName -ErrorAction SilentlyContinue | Where {$_.IPAddress} " + vbCrLf)
         Script.Append(" $cpu = Get-WmiObject win32_processor -computername $computername" + vbCrLf)
         Script.Append(" $mem = Get-WmiObject win32_operatingsystem -ComputerName $ComputerName | Foreach {" + Chr(34) + "{0:N2}" + Chr(34) + " -f ((($_.TotalVisibleMemorySize - $_.FreePhysicalMemory)*100)/ $_.TotalVisibleMemorySize)}" + vbCrLf)
-        Script.Append(" $theuser = (get-wmiobject Win32_ComputerSystem -ComputerName $ComputerName).UserName.Split('\')[1]" + vbCrLf)
+        Script.Append(" $theuser = (get-wmiobject Win32_ComputerSystem -ComputerName $ComputerName).UserName" + vbCrLf)
         Script.Append(" $cpuuseaverage = $cpu | Measure-Object -property LoadPercentage -Average" + vbCrLf)
         Script.Append(" $thecomputerserial = $bios.SerialNumber" + vbCrLf)
         Script.Append(" $uptime = (Get-Date) - $os.ConvertToDateTime($os.LastBootUpTime)" + vbCrLf)
@@ -73,61 +73,28 @@ Public Class Form1
         Script.Append("$disk0 = $dsk.DeviceID.Item(0)" + vbCrLf)
         Script.Append("$disk0free = $dsk.FreeGB.Item(0)" + vbCrLf)
         Script.Append("$disk0total = $dsk.TotalGB.Item(0)" + vbCrLf)
-        Script.Append("" + vbCrLf)
-        Script.Append("" + vbCrLf)
-        Script.Append("$hotfixes = " + Chr(34) + "KB4012212" + Chr(34) + "," + Chr(34) + "KB4012213" + Chr(34) + "," + Chr(34) + "KB4012214" + Chr(34) + "," + Chr(34) + "KB4012215" + Chr(34) + "," + Chr(34) + "KB4012216" + Chr(34) + "," + Chr(34) + "KB4012217" + Chr(34) + "," + Chr(34) + "KB4012598" + Chr(34) + "," + Chr(34) + "KB4012606" + Chr(34) + "," + Chr(34) + "KB4013198" + Chr(34) + "," + Chr(34) + "KB4013429" + Chr(34) + ", " + Chr(34) + "KB4022715" + Chr(34) + "" + vbCrLf)
-        Script.Append("$hotfix = Get-HotFix -ComputerName $ComputerName | Where-Object {$hotfixes -contains $_.HotfixID} | Select-Object -expandproperty " + Chr(34) + "HotFixID" + Chr(34) + "" + vbCrLf)
-        Script.Append("    if($hotfix) {" + vbCrLf)
-        Script.Append("        $check = $True" + vbCrLf)
-        Script.Append("                                $hf = $hotfix" + vbCrLf)
-        Script.Append("    } " + vbCrLf)
-        Script.Append("                else {" + vbCrLf)
-        Script.Append("        $check = $False" + vbCrLf)
-        Script.Append("                                $hf = " + Chr(34) + "None" + Chr(34) + "" + vbCrLf)
-        Script.Append("    }" + vbCrLf)
-        Script.Append("" + vbCrLf)
-        Script.Append("   Write-Output (" + Chr(34) + "Computer Name : $thecomputername" + Chr(34) + ")" + vbCrLf)
-        Script.Append("   Write-Output (" + Chr(34) + "IP Address    : $theipaddress" + Chr(34) + ")" + vbCrLf)
-        Script.Append("   Write-Output (" + Chr(34) + "OS            : $theos" + Chr(34) + ")" + vbCrLf)
-        Script.Append("   Write-Output (" + Chr(34) + "Computer Make : $thecomputermake" + Chr(34) + ")" + vbCrLf)
-        Script.Append("   Write-Output (" + Chr(34) + "Computer Model: $thecomputermodel" + Chr(34) + ")" + vbCrLf)
-        Script.Append("   Write-Output (" + Chr(34) + "CPU           : $thecpuname" + Chr(34) + ")" + vbCrLf)
-        Script.Append("   Write-Output (" + Chr(34) + "Bios version  : $thebiosversion" + Chr(34) + ")" + vbCrLf)
-        Script.Append("   Write-Output (" + Chr(34) + "CPU Load      : $thecpuloadaverage%" + Chr(34) + ")" + vbCrLf)
-        Script.Append("   Write-Output (" + Chr(34) + "Memory Load   : $mem%" + Chr(34) + ")" + vbCrLf)
-        Script.Append("   Write-Output (" + Chr(34) + "Last boot     : " + Chr(34) + " + $os.ConvertToDateTime($os.LastBootUpTime) )" + vbCrLf)
-        Script.Append("   Write-Output (" + Chr(34) + "Uptime        : " + Chr(34) + " + $uptime.Days + " + Chr(34) + " Days " + Chr(34) + " + $uptime.Hours + " + Chr(34) + " Hours " + Chr(34) + " + $uptime.Minutes + " + Chr(34) + " Minutes" + Chr(34) + ")" + vbCrLf)
-        Script.Append("   Write-Output (" + Chr(34) + "Wcry?         : " + Chr(34) + " + $check)" + vbCrLf)
-        Script.Append("   Write-Output (" + Chr(34) + "Patch KB      : " + Chr(34) + " + $hf)" + vbCrLf)
-        Script.Append("   " + vbCrLf)
-        Script.Append("   " + vbCrLf)
-        Script.Append("  " + vbCrLf)
+        Script.Append(" " + vbCrLf)
         Script.Append(" " + vbCrLf)
         Script.Append("$theuptime = " + Chr(34) + "$($uptime.Days) Days $($uptime.Hours) Hours $($uptime.Minutes) Minutes $($uptime.Seconds) Seconds" + Chr(34) + "" + vbCrLf)
         Script.Append("$thememorypercent = " + Chr(34) + "$($mem) %" + Chr(34) + "" + vbCrLf)
-        Script.Append("$user = Import-CSV " + Chr(34) + "C:\Program Files\Active Directory Admin Tool\Data\ticket_data.csv" + Chr(34) + "" + vbCrLf)
-        Script.Append("$user.ComputerModel = $thecomputermodel" + vbCrLf)
-        Script.Append("$user.ComputerSerial = $thecomputerserial" + vbCrLf)
-        Script.Append("$user.OS = $theos" + vbCrLf)
-        Script.Append("$user.CPU = $thecpuname" + vbCrLf)
-        Script.Append("$user.MemoryTotal = $installedmemory" + vbCrLf)
-        Script.Append("$user.LastBoot = $os.ConvertToDateTime($os.LastBootUpTime)" + vbCrLf)
-        Script.Append("$user.WCryPatched = $check" + vbCrLf)
-        Script.Append("$user.HotFix = $hf" + vbCrLf)
-        Script.Append("$user.BiosVersion = $thebiosversion" + vbCrLf)
-        Script.Append("$user.DiskFree = $disk0free" + vbCrLf)
-        Script.Append("$user.DiskTotal = $disk0total" + vbCrLf)
-        Script.Append("$user.IpAddress = $theipaddress" + vbCrLf)
-        Script.Append("$user.SelectedComputer = $id" + vbCrLf)
-        Script.Append("$user.ActiveUser = $theuser" + vbCrLf)
-        Script.Append("$user.Uptime = $theuptime" + vbCrLf)
-        Script.Append("$user.MemoryPercent = $thememorypercent" + vbCrLf)
         Script.Append("" + vbCrLf)
-        Script.Append("$user | Export-CSV " + Chr(34) + "C:\Program Files\Active Directory Admin Tool\Data\ticket_data.csv" + Chr(34) + " -Force -NoTypeInformation" + vbCrLf)
-        Script.Append("$items = " + Chr(34) + "C:\Program Files\Active Directory Admin Tool\Data\ticket_data.csv" + Chr(34) + "" + vbCrLf)
-        Script.Append("(Get-Content $items) | Foreach-Object {$_ -replace '" + Chr(34) + "', " + Chr(34) + "" + Chr(34) + "} | Set-Content $items" + vbCrLf)
+        Script.Append("   Write-Output (" + Chr(34) + "Active User: $theuser" + Chr(34) + ")" + vbCrLf)
+        Script.Append("   Write-Output (" + Chr(34) + "Computer Name: $thecomputername" + Chr(34) + ")" + vbCrLf)
+        Script.Append("   Write-Output (" + Chr(34) + "IP Address: $theipaddress" + Chr(34) + ")" + vbCrLf)
+        Script.Append("   Write-Output (" + Chr(34) + "OS: $theos" + Chr(34) + ")" + vbCrLf)
+        Script.Append("   Write-Output (" + Chr(34) + "Computer Make: $thecomputermake" + Chr(34) + ")" + vbCrLf)
+        Script.Append("   Write-Output (" + Chr(34) + "Computer Model: $thecomputermodel" + Chr(34) + ")" + vbCrLf)
+        Script.Append("   Write-Output (" + Chr(34) + "CPU: $thecpuname" + Chr(34) + ")" + vbCrLf)
+        Script.Append("   Write-Output (" + Chr(34) + "Memory: $installedmemory" + Chr(34) + " + " + Chr(34) + " GB" + Chr(34) + ")" + vbCrLf)
+        Script.Append("   Write-Output (" + Chr(34) + "Bios version: $thebiosversion" + Chr(34) + ")" + vbCrLf)
+        Script.Append("   Write-Output (" + Chr(34) + "CPU Load: $thecpuloadaverage%" + Chr(34) + ")" + vbCrLf)
+        Script.Append("   Write-Output (" + Chr(34) + "Memory Load: $mem%" + Chr(34) + ")" + vbCrLf)
+        Script.Append("   Write-Output (" + Chr(34) + "Last boot: " + Chr(34) + " + $os.ConvertToDateTime($os.LastBootUpTime) )" + vbCrLf)
+        Script.Append("   Write-Output (" + Chr(34) + "Uptime: " + Chr(34) + " + $uptime.Days + " + Chr(34) + " Days " + Chr(34) + " + $uptime.Hours + " + Chr(34) + " Hours " + Chr(34) + " + $uptime.Minutes + " + Chr(34) + " Minutes" + Chr(34) + ")" + vbCrLf)
         Return Script.ToString()
     End Function
+
+
 
     'Get Members Script
     Private Function GetGroupMembers()
@@ -619,23 +586,7 @@ Public Class Form1
         ListView2.Items.Clear()
         TbManager.Clear()
         TbUserID.Focus()
-        ModelValue.Clear()
-        SerialValue.Clear()
-        OSValue.Clear()
-        CPUValue.Clear()
-        MemoryValue.Clear()
-        HDFreeValue.Clear()
-        HDTotalValue.Clear()
-        SubnetValue.Clear()
-        LastBootValue.Clear()
-        WcryValue.Clear()
-        LastBootValue.Clear()
-        TbUptime.Clear()
-        WcryValue.Clear()
-        KBValue.Clear()
-        TbMemoryPercent.Clear()
-        TbManager.Clear()
-        TbActiveUser.Clear()
+        tbComputerDetails.Clear()
         lblHMB.Text = ""
         lblAccountStatus.Text = ""
         lblConjunction.Text = ""
@@ -692,19 +643,7 @@ Public Class Form1
     'Copy computer details to clipboard button
     Private Sub BtnCopyDetails_Click(sender As Object, e As EventArgs) Handles BtnCopyDetails.Click
         Dim str As String
-        str = "Active User: " & TbActiveUser.Text & vbCrLf &
-            "Computer: " & SelectedComputer.Text & vbCrLf &
-            "Model: " & ModelValue.Text & vbCrLf &
-            "Serial: " & SerialValue.Text & vbCrLf &
-            "OS: " & OSValue.Text & vbCrLf &
-            "CPU: " & CPUValue.Text & vbCrLf &
-            "Memory: " & MemoryValue.Text & vbCrLf &
-            "HD Free: " & HDFreeValue.Text & vbCrLf &
-            "HD Total: " & HDTotalValue.Text & vbCrLf &
-            "IP: " & SubnetValue.Text & vbCrLf &
-            "Last boot: " & LastBootValue.Text & vbCrLf &
-            "Uptime: " & TbUptime.Text & vbCrLf &
-            "Patched: " & WcryValue.Text & " " & KBValue.Text
+        str = tbComputerDetails.Text
         Clipboard.SetText(str)
     End Sub
 
@@ -739,32 +678,14 @@ Public Class Form1
     'Search Computer button - gets computer info using powershell
     Private Sub SearchComputer_Click(sender As Object, e As EventArgs) Handles SearchComputer.Click
         Hourglass(True)
-        Try
-            ResultsBox.Text = RunScript(GetUserComputerSelected).ToString() 'runs powershell script to get computer info
 
-            Using sr As New StreamReader("C:\Program Files\Active Directory Admin Tool\Data\ticket_data.csv")
-                sr.ReadLine.Split(","c)
-                While Not sr.EndOfStream
-                    Dim newline() As String = sr.ReadLine.Split(","c)
-                    ModelValue.Text = (newline(27)) 'Model of Computer
-                    SerialValue.Text = (newline(26)) 'Serial of Computer
-                    OSValue.Text = (newline(13)) 'OS value
-                    CPUValue.Text = (newline(14)) 'CPU Value
-                    MemoryValue.Text = (newline(15)) + " GB" 'Memory in GB
-                    LastBootValue.Text = (newline(16)) 'Last Boot up time
-                    WcryValue.Text = (newline(19)) 'wcry patched true or false
-                    KBValue.Text = (newline(18)) 'wcry kb#
-                    HDFreeValue.Text = (newline(20)) + " GB" 'Total free space in GB
-                    HDTotalValue.Text = (newline(21)) + " GB" 'Total space in GB
-                    SubnetValue.Text = (newline(22)) 'IP Address
-                    TbActiveUser.Text = (newline(25)) 'Active User
-                    TbUptime.Text = (newline(24)) 'Uptime
-                    TbMemoryPercent.Text = (newline(23)) + " in use" 'Memory%
-                End While
-                sr.Close()
-            End Using
+        Try
+            tbComputerDetails.Text = RunScript(GetUserComputerSelected).ToString() 'runs powershell script to get user group membership
+            'tbComputerDetails.Text = tbComputerDetails.Text.Replace("@{name=", "")
+            'tbComputerDetails.Text = tbComputerDetails.Text.Replace("}", "")
         Catch
         End Try
+
         GC.Collect()
         GC.WaitForPendingFinalizers()
         Hourglass(False)

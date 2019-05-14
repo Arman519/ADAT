@@ -62,6 +62,7 @@ Partial Class Form1
         Me.lblCurrentRole = New System.Windows.Forms.Label()
         Me.TbManager = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.BtnCopyMembers = New System.Windows.Forms.Button()
         Me.lblGroupMemberships = New System.Windows.Forms.Label()
         Me.TBADGroupMemberships = New System.Windows.Forms.RichTextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -74,32 +75,6 @@ Partial Class Form1
         Me.SelectedComputer = New System.Windows.Forms.TextBox()
         Me.ManagerLabel = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TbMemoryPercent = New System.Windows.Forms.TextBox()
-        Me.TbUptime = New System.Windows.Forms.TextBox()
-        Me.UptimeLabel = New System.Windows.Forms.Label()
-        Me.TbActiveUser = New System.Windows.Forms.TextBox()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.KBValue = New System.Windows.Forms.TextBox()
-        Me.WcryValue = New System.Windows.Forms.TextBox()
-        Me.WcryLabel = New System.Windows.Forms.Label()
-        Me.LastBootValue = New System.Windows.Forms.TextBox()
-        Me.LastbootLabel = New System.Windows.Forms.Label()
-        Me.SubnetValue = New System.Windows.Forms.TextBox()
-        Me.HDTotalValue = New System.Windows.Forms.TextBox()
-        Me.HDFreeValue = New System.Windows.Forms.TextBox()
-        Me.MemoryValue = New System.Windows.Forms.TextBox()
-        Me.CPUValue = New System.Windows.Forms.TextBox()
-        Me.OSValue = New System.Windows.Forms.TextBox()
-        Me.SerialValue = New System.Windows.Forms.TextBox()
-        Me.ModelValue = New System.Windows.Forms.TextBox()
-        Me.ModelLabel = New System.Windows.Forms.Label()
-        Me.SerialLabel = New System.Windows.Forms.Label()
-        Me.OSLabel = New System.Windows.Forms.Label()
-        Me.CPULabel = New System.Windows.Forms.Label()
-        Me.MemoryLabel = New System.Windows.Forms.Label()
-        Me.HDFreeLabel = New System.Windows.Forms.Label()
-        Me.HDTotalLabel = New System.Windows.Forms.Label()
-        Me.SubnetLabel = New System.Windows.Forms.Label()
         Me.lblUserDN = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.NewUser = New System.Windows.Forms.Button()
@@ -125,7 +100,7 @@ Partial Class Form1
         Me.clmEMail = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ListView2 = New System.Windows.Forms.ListView()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.BtnCopyMembers = New System.Windows.Forms.Button()
+        Me.tbComputerDetails = New System.Windows.Forms.RichTextBox()
         Me.gbTelephone.SuspendLayout()
         CType(Me.pbUserImg, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -545,6 +520,15 @@ Partial Class Form1
         Me.Panel1.Size = New System.Drawing.Size(656, 479)
         Me.Panel1.TabIndex = 56
         '
+        'BtnCopyMembers
+        '
+        Me.BtnCopyMembers.Location = New System.Drawing.Point(500, 90)
+        Me.BtnCopyMembers.Name = "BtnCopyMembers"
+        Me.BtnCopyMembers.Size = New System.Drawing.Size(79, 34)
+        Me.BtnCopyMembers.TabIndex = 59
+        Me.BtnCopyMembers.Text = "Copy Memberships"
+        Me.BtnCopyMembers.UseVisualStyleBackColor = True
+        '
         'lblGroupMemberships
         '
         Me.lblGroupMemberships.AutoSize = True
@@ -651,314 +635,13 @@ Partial Class Form1
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.TbMemoryPercent)
-        Me.GroupBox1.Controls.Add(Me.TbUptime)
-        Me.GroupBox1.Controls.Add(Me.UptimeLabel)
-        Me.GroupBox1.Controls.Add(Me.TbActiveUser)
-        Me.GroupBox1.Controls.Add(Me.Label19)
-        Me.GroupBox1.Controls.Add(Me.KBValue)
-        Me.GroupBox1.Controls.Add(Me.WcryValue)
-        Me.GroupBox1.Controls.Add(Me.WcryLabel)
-        Me.GroupBox1.Controls.Add(Me.LastBootValue)
-        Me.GroupBox1.Controls.Add(Me.LastbootLabel)
-        Me.GroupBox1.Controls.Add(Me.SubnetValue)
-        Me.GroupBox1.Controls.Add(Me.HDTotalValue)
-        Me.GroupBox1.Controls.Add(Me.HDFreeValue)
-        Me.GroupBox1.Controls.Add(Me.MemoryValue)
-        Me.GroupBox1.Controls.Add(Me.CPUValue)
-        Me.GroupBox1.Controls.Add(Me.OSValue)
-        Me.GroupBox1.Controls.Add(Me.SerialValue)
-        Me.GroupBox1.Controls.Add(Me.ModelValue)
-        Me.GroupBox1.Controls.Add(Me.ModelLabel)
-        Me.GroupBox1.Controls.Add(Me.SerialLabel)
-        Me.GroupBox1.Controls.Add(Me.OSLabel)
-        Me.GroupBox1.Controls.Add(Me.CPULabel)
-        Me.GroupBox1.Controls.Add(Me.MemoryLabel)
-        Me.GroupBox1.Controls.Add(Me.HDFreeLabel)
-        Me.GroupBox1.Controls.Add(Me.HDTotalLabel)
-        Me.GroupBox1.Controls.Add(Me.SubnetLabel)
+        Me.GroupBox1.Controls.Add(Me.tbComputerDetails)
         Me.GroupBox1.Location = New System.Drawing.Point(331, 246)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(311, 193)
         Me.GroupBox1.TabIndex = 18
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Computer Details:"
-        '
-        'TbMemoryPercent
-        '
-        Me.TbMemoryPercent.BackColor = System.Drawing.SystemColors.Control
-        Me.TbMemoryPercent.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TbMemoryPercent.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.TbMemoryPercent.ForeColor = System.Drawing.Color.Black
-        Me.TbMemoryPercent.Location = New System.Drawing.Point(128, 88)
-        Me.TbMemoryPercent.Name = "TbMemoryPercent"
-        Me.TbMemoryPercent.ReadOnly = True
-        Me.TbMemoryPercent.Size = New System.Drawing.Size(102, 13)
-        Me.TbMemoryPercent.TabIndex = 97
-        '
-        'TbUptime
-        '
-        Me.TbUptime.BackColor = System.Drawing.SystemColors.Control
-        Me.TbUptime.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TbUptime.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.TbUptime.ForeColor = System.Drawing.Color.Black
-        Me.TbUptime.Location = New System.Drawing.Point(69, 157)
-        Me.TbUptime.Name = "TbUptime"
-        Me.TbUptime.ReadOnly = True
-        Me.TbUptime.Size = New System.Drawing.Size(236, 13)
-        Me.TbUptime.TabIndex = 96
-        '
-        'UptimeLabel
-        '
-        Me.UptimeLabel.AutoSize = True
-        Me.UptimeLabel.Location = New System.Drawing.Point(24, 157)
-        Me.UptimeLabel.Name = "UptimeLabel"
-        Me.UptimeLabel.Size = New System.Drawing.Size(43, 13)
-        Me.UptimeLabel.TabIndex = 95
-        Me.UptimeLabel.Text = "Uptime:"
-        '
-        'TbActiveUser
-        '
-        Me.TbActiveUser.BackColor = System.Drawing.SystemColors.Control
-        Me.TbActiveUser.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TbActiveUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.TbActiveUser.ForeColor = System.Drawing.Color.Black
-        Me.TbActiveUser.Location = New System.Drawing.Point(70, 12)
-        Me.TbActiveUser.Name = "TbActiveUser"
-        Me.TbActiveUser.ReadOnly = True
-        Me.TbActiveUser.Size = New System.Drawing.Size(236, 13)
-        Me.TbActiveUser.TabIndex = 94
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(3, 13)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(65, 13)
-        Me.Label19.TabIndex = 93
-        Me.Label19.Text = "Active User:"
-        '
-        'KBValue
-        '
-        Me.KBValue.BackColor = System.Drawing.SystemColors.Control
-        Me.KBValue.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.KBValue.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.KBValue.ForeColor = System.Drawing.Color.Black
-        Me.KBValue.Location = New System.Drawing.Point(117, 172)
-        Me.KBValue.Name = "KBValue"
-        Me.KBValue.ReadOnly = True
-        Me.KBValue.Size = New System.Drawing.Size(100, 13)
-        Me.KBValue.TabIndex = 92
-        '
-        'WcryValue
-        '
-        Me.WcryValue.BackColor = System.Drawing.SystemColors.Control
-        Me.WcryValue.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.WcryValue.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.WcryValue.ForeColor = System.Drawing.Color.Black
-        Me.WcryValue.Location = New System.Drawing.Point(70, 172)
-        Me.WcryValue.Name = "WcryValue"
-        Me.WcryValue.ReadOnly = True
-        Me.WcryValue.Size = New System.Drawing.Size(236, 13)
-        Me.WcryValue.TabIndex = 91
-        '
-        'WcryLabel
-        '
-        Me.WcryLabel.AutoSize = True
-        Me.WcryLabel.Location = New System.Drawing.Point(32, 171)
-        Me.WcryLabel.Name = "WcryLabel"
-        Me.WcryLabel.Size = New System.Drawing.Size(35, 13)
-        Me.WcryLabel.TabIndex = 90
-        Me.WcryLabel.Text = "BIOS:"
-        '
-        'LastBootValue
-        '
-        Me.LastBootValue.BackColor = System.Drawing.SystemColors.Control
-        Me.LastBootValue.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.LastBootValue.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LastBootValue.ForeColor = System.Drawing.Color.Black
-        Me.LastBootValue.Location = New System.Drawing.Point(70, 145)
-        Me.LastBootValue.Name = "LastBootValue"
-        Me.LastBootValue.ReadOnly = True
-        Me.LastBootValue.Size = New System.Drawing.Size(236, 13)
-        Me.LastBootValue.TabIndex = 89
-        '
-        'LastbootLabel
-        '
-        Me.LastbootLabel.AutoSize = True
-        Me.LastbootLabel.Location = New System.Drawing.Point(12, 144)
-        Me.LastbootLabel.Name = "LastbootLabel"
-        Me.LastbootLabel.Size = New System.Drawing.Size(55, 13)
-        Me.LastbootLabel.TabIndex = 88
-        Me.LastbootLabel.Text = "Last Boot:"
-        '
-        'SubnetValue
-        '
-        Me.SubnetValue.BackColor = System.Drawing.SystemColors.Control
-        Me.SubnetValue.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.SubnetValue.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.SubnetValue.ForeColor = System.Drawing.Color.Black
-        Me.SubnetValue.Location = New System.Drawing.Point(70, 133)
-        Me.SubnetValue.Name = "SubnetValue"
-        Me.SubnetValue.ReadOnly = True
-        Me.SubnetValue.Size = New System.Drawing.Size(236, 13)
-        Me.SubnetValue.TabIndex = 87
-        '
-        'HDTotalValue
-        '
-        Me.HDTotalValue.BackColor = System.Drawing.SystemColors.Control
-        Me.HDTotalValue.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.HDTotalValue.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.HDTotalValue.ForeColor = System.Drawing.Color.Black
-        Me.HDTotalValue.Location = New System.Drawing.Point(70, 117)
-        Me.HDTotalValue.Name = "HDTotalValue"
-        Me.HDTotalValue.ReadOnly = True
-        Me.HDTotalValue.Size = New System.Drawing.Size(236, 13)
-        Me.HDTotalValue.TabIndex = 86
-        '
-        'HDFreeValue
-        '
-        Me.HDFreeValue.BackColor = System.Drawing.SystemColors.Control
-        Me.HDFreeValue.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.HDFreeValue.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.HDFreeValue.ForeColor = System.Drawing.Color.Black
-        Me.HDFreeValue.Location = New System.Drawing.Point(70, 102)
-        Me.HDFreeValue.Name = "HDFreeValue"
-        Me.HDFreeValue.ReadOnly = True
-        Me.HDFreeValue.Size = New System.Drawing.Size(236, 13)
-        Me.HDFreeValue.TabIndex = 85
-        '
-        'MemoryValue
-        '
-        Me.MemoryValue.BackColor = System.Drawing.SystemColors.Control
-        Me.MemoryValue.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.MemoryValue.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.MemoryValue.ForeColor = System.Drawing.Color.Black
-        Me.MemoryValue.Location = New System.Drawing.Point(70, 88)
-        Me.MemoryValue.Name = "MemoryValue"
-        Me.MemoryValue.ReadOnly = True
-        Me.MemoryValue.Size = New System.Drawing.Size(236, 13)
-        Me.MemoryValue.TabIndex = 84
-        '
-        'CPUValue
-        '
-        Me.CPUValue.BackColor = System.Drawing.SystemColors.Control
-        Me.CPUValue.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.CPUValue.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.CPUValue.ForeColor = System.Drawing.Color.Black
-        Me.CPUValue.Location = New System.Drawing.Point(70, 72)
-        Me.CPUValue.Name = "CPUValue"
-        Me.CPUValue.ReadOnly = True
-        Me.CPUValue.Size = New System.Drawing.Size(236, 13)
-        Me.CPUValue.TabIndex = 83
-        '
-        'OSValue
-        '
-        Me.OSValue.BackColor = System.Drawing.SystemColors.Control
-        Me.OSValue.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.OSValue.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.OSValue.ForeColor = System.Drawing.Color.Black
-        Me.OSValue.Location = New System.Drawing.Point(70, 57)
-        Me.OSValue.Name = "OSValue"
-        Me.OSValue.ReadOnly = True
-        Me.OSValue.Size = New System.Drawing.Size(236, 13)
-        Me.OSValue.TabIndex = 82
-        '
-        'SerialValue
-        '
-        Me.SerialValue.BackColor = System.Drawing.SystemColors.Control
-        Me.SerialValue.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.SerialValue.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.SerialValue.ForeColor = System.Drawing.Color.Black
-        Me.SerialValue.Location = New System.Drawing.Point(70, 42)
-        Me.SerialValue.Name = "SerialValue"
-        Me.SerialValue.ReadOnly = True
-        Me.SerialValue.Size = New System.Drawing.Size(236, 13)
-        Me.SerialValue.TabIndex = 81
-        '
-        'ModelValue
-        '
-        Me.ModelValue.BackColor = System.Drawing.SystemColors.Control
-        Me.ModelValue.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.ModelValue.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.ModelValue.ForeColor = System.Drawing.Color.Black
-        Me.ModelValue.Location = New System.Drawing.Point(70, 27)
-        Me.ModelValue.Name = "ModelValue"
-        Me.ModelValue.ReadOnly = True
-        Me.ModelValue.Size = New System.Drawing.Size(236, 13)
-        Me.ModelValue.TabIndex = 80
-        '
-        'ModelLabel
-        '
-        Me.ModelLabel.AutoSize = True
-        Me.ModelLabel.Location = New System.Drawing.Point(28, 28)
-        Me.ModelLabel.Name = "ModelLabel"
-        Me.ModelLabel.Size = New System.Drawing.Size(39, 13)
-        Me.ModelLabel.TabIndex = 24
-        Me.ModelLabel.Text = "Model:"
-        '
-        'SerialLabel
-        '
-        Me.SerialLabel.AutoSize = True
-        Me.SerialLabel.Location = New System.Drawing.Point(31, 43)
-        Me.SerialLabel.Name = "SerialLabel"
-        Me.SerialLabel.Size = New System.Drawing.Size(36, 13)
-        Me.SerialLabel.TabIndex = 25
-        Me.SerialLabel.Text = "Serial:"
-        '
-        'OSLabel
-        '
-        Me.OSLabel.AutoSize = True
-        Me.OSLabel.Location = New System.Drawing.Point(42, 58)
-        Me.OSLabel.Name = "OSLabel"
-        Me.OSLabel.Size = New System.Drawing.Size(25, 13)
-        Me.OSLabel.TabIndex = 26
-        Me.OSLabel.Text = "OS:"
-        '
-        'CPULabel
-        '
-        Me.CPULabel.AutoSize = True
-        Me.CPULabel.Location = New System.Drawing.Point(35, 73)
-        Me.CPULabel.Name = "CPULabel"
-        Me.CPULabel.Size = New System.Drawing.Size(32, 13)
-        Me.CPULabel.TabIndex = 27
-        Me.CPULabel.Text = "CPU:"
-        '
-        'MemoryLabel
-        '
-        Me.MemoryLabel.AutoSize = True
-        Me.MemoryLabel.Location = New System.Drawing.Point(20, 88)
-        Me.MemoryLabel.Name = "MemoryLabel"
-        Me.MemoryLabel.Size = New System.Drawing.Size(47, 13)
-        Me.MemoryLabel.TabIndex = 28
-        Me.MemoryLabel.Text = "Memory:"
-        '
-        'HDFreeLabel
-        '
-        Me.HDFreeLabel.AutoSize = True
-        Me.HDFreeLabel.Location = New System.Drawing.Point(17, 103)
-        Me.HDFreeLabel.Name = "HDFreeLabel"
-        Me.HDFreeLabel.Size = New System.Drawing.Size(50, 13)
-        Me.HDFreeLabel.TabIndex = 29
-        Me.HDFreeLabel.Text = "HD Free:"
-        '
-        'HDTotalLabel
-        '
-        Me.HDTotalLabel.AutoSize = True
-        Me.HDTotalLabel.Location = New System.Drawing.Point(14, 118)
-        Me.HDTotalLabel.Name = "HDTotalLabel"
-        Me.HDTotalLabel.Size = New System.Drawing.Size(53, 13)
-        Me.HDTotalLabel.TabIndex = 30
-        Me.HDTotalLabel.Text = "HD Total:"
-        '
-        'SubnetLabel
-        '
-        Me.SubnetLabel.AutoSize = True
-        Me.SubnetLabel.Location = New System.Drawing.Point(47, 132)
-        Me.SubnetLabel.Name = "SubnetLabel"
-        Me.SubnetLabel.Size = New System.Drawing.Size(20, 13)
-        Me.SubnetLabel.TabIndex = 31
-        Me.SubnetLabel.Text = "IP:"
         '
         'lblUserDN
         '
@@ -1167,14 +850,13 @@ Partial Class Form1
         Me.Label4.TabIndex = 12
         Me.Label4.Text = "Exchange Info:"
         '
-        'BtnCopyMembers
+        'tbComputerDetails
         '
-        Me.BtnCopyMembers.Location = New System.Drawing.Point(500, 90)
-        Me.BtnCopyMembers.Name = "BtnCopyMembers"
-        Me.BtnCopyMembers.Size = New System.Drawing.Size(79, 34)
-        Me.BtnCopyMembers.TabIndex = 59
-        Me.BtnCopyMembers.Text = "Copy Memberships"
-        Me.BtnCopyMembers.UseVisualStyleBackColor = True
+        Me.tbComputerDetails.Location = New System.Drawing.Point(7, 18)
+        Me.tbComputerDetails.Name = "tbComputerDetails"
+        Me.tbComputerDetails.Size = New System.Drawing.Size(294, 164)
+        Me.tbComputerDetails.TabIndex = 0
+        Me.tbComputerDetails.Text = ""
         '
         'Form1
         '
@@ -1201,7 +883,6 @@ Partial Class Form1
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
@@ -1241,14 +922,6 @@ Partial Class Form1
     Friend WithEvents Label5 As Label
     Friend WithEvents NewUser As Button
     Friend WithEvents Label15 As Label
-    Friend WithEvents SubnetLabel As Label
-    Friend WithEvents HDTotalLabel As Label
-    Friend WithEvents HDFreeLabel As Label
-    Friend WithEvents MemoryLabel As Label
-    Friend WithEvents CPULabel As Label
-    Friend WithEvents OSLabel As Label
-    Friend WithEvents SerialLabel As Label
-    Friend WithEvents ModelLabel As Label
     Friend WithEvents SelectedComputer As TextBox
     Friend WithEvents Label29 As Label
     Friend WithEvents Label32 As Label
@@ -1264,14 +937,6 @@ Partial Class Form1
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CreatedByArmanRamazyanToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents UnlockButton As Button
-    Friend WithEvents SubnetValue As TextBox
-    Friend WithEvents HDTotalValue As TextBox
-    Friend WithEvents HDFreeValue As TextBox
-    Friend WithEvents MemoryValue As TextBox
-    Friend WithEvents CPUValue As TextBox
-    Friend WithEvents OSValue As TextBox
-    Friend WithEvents SerialValue As TextBox
-    Friend WithEvents ModelValue As TextBox
     Friend WithEvents TbAddress As TextBox
     Friend WithEvents UserAddress As Label
     Friend WithEvents TbCity As TextBox
@@ -1283,17 +948,7 @@ Partial Class Form1
     Friend WithEvents BtnCopyDetails As Button
     Friend WithEvents lblUserDN As Label
     Friend WithEvents BtnCopyInfo As Button
-    Friend WithEvents LastBootValue As TextBox
-    Friend WithEvents LastbootLabel As Label
-    Friend WithEvents KBValue As TextBox
-    Friend WithEvents WcryValue As TextBox
-    Friend WithEvents WcryLabel As Label
     Friend WithEvents SearchComputer As Button
-    Friend WithEvents TbUptime As TextBox
-    Friend WithEvents UptimeLabel As Label
-    Friend WithEvents TbActiveUser As TextBox
-    Friend WithEvents Label19 As Label
-    Friend WithEvents TbMemoryPercent As TextBox
     Friend WithEvents ResultsBox As RichTextBox
     Friend WithEvents AccountNotesLabel As Label
     Friend WithEvents DonateToolStripMenuItem As ToolStripMenuItem
@@ -1311,4 +966,5 @@ Partial Class Form1
     Friend WithEvents TBADGroupMemberships As RichTextBox
     Friend WithEvents lblGroupMemberships As Label
     Friend WithEvents BtnCopyMembers As Button
+    Friend WithEvents tbComputerDetails As RichTextBox
 End Class
