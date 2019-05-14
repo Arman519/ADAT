@@ -7,5 +7,8 @@ Do not change the default directory when using the installer.
 Getting Started
 Download and Install Active Directory Admin Tool Installer.msi from the root ADAT git folder.
 
+Installation:
+![ttystudio GIF](http://recordit.co/A9sF2bQqcQ)
+
 Searching Computer Info
 ![ttystudio GIF](http://g.recordit.co/KtVh9qm7DL.gif)
