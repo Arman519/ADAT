@@ -8,11 +8,11 @@ Download and Install [ADAT_v1.0_Setup.msi](https://github.com/Arman519/ADAT/blob
 ![ttystudio GIF](http://g.recordit.co/A9sF2bQqcQ.gif)
 
 ### Searching Users
-Search users by User ID, Firstname, or Lastname
-You can use partial words with a combination of each field
+Search users by User ID, Firstname, or Lastname.
+You can use partial words with a combination of each field.
 ![ttystudio GIF](http://g.recordit.co/YRopDFuSlS.gif)
 
 ### Searching Computer Info
-Search computer by computer name or IP Address
-You can use partial words with a combination of each field
+Search computer by computer name or IP Address.
+You can use partial words with a combination of each field.
 ![ttystudio GIF](http://g.recordit.co/rcms7bLUw6.gif)
