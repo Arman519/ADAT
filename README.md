@@ -8,7 +8,6 @@ Getting Started
 Download and Install Active Directory Admin Tool Installer.msi from the root ADAT git folder.
 
 Installation:
-![ttystudio GIF](http://recordit.co/A9sF2bQqcQ)
+![ttystudio GIF](http://g.recordit.co/A9sF2bQqcQ.gif)
 
 Searching Computer Info
-![ttystudio GIF](http://g.recordit.co/KtVh9qm7DL.gif)
