@@ -2,10 +2,8 @@
 
 ADAT is a tool that allows you to look up users in Active Directory and process unlocks a lot quicker than using ADUC.
 
-Do not change the default directory when using the installer.
-
 Getting Started
-Download and Install Active Directory Admin Tool Installer.msi from the root ADAT git folder.
+Download and Install [ADAT](https://github.com/Arman519/ADAT/blob/master/ADAT_v1.0_Setup.msi)
 
 ### Installation:
 Download and Run ADAT_v1.0_Setup.msi
