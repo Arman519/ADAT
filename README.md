@@ -16,5 +16,4 @@ You can use partial words with a combination of each field.
 
 ### Searching Computer Info
 Search computer by computer name or IP Address.
-You can use partial words with a combination of each field.
 ![ttystudio GIF](http://g.recordit.co/rcms7bLUw6.gif)
