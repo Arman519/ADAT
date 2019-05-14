@@ -483,18 +483,18 @@ Public Class Form1
                 lblHMB.Text = "NO"
             End If
         End Using 'Close the directory entry to the user object
-
-        Hourglass(False)
-        'enable the AD management buttons
-        BtnLockout.Enabled = True
-        UnlockButton.Enabled = True
-
         Try
             TBADGroupMemberships.Text = RunScript(GetGroupMembers).ToString() 'runs powershell script to get user group membership
             TBADGroupMemberships.Text = TBADGroupMemberships.Text.Replace("@{name=", "")
             TBADGroupMemberships.Text = TBADGroupMemberships.Text.Replace("}", "")
         Catch
         End Try
+        Hourglass(False)
+        'enable the AD management buttons
+        BtnLockout.Enabled = True
+        UnlockButton.Enabled = True
+
+
 
         Hourglass(True)
         GC.Collect()

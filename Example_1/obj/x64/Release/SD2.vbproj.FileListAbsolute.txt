@@ -82,3 +82,4 @@ Z:\VS Data\Example_1 - Copy\Example_1\Example_1\obj\x64\Release\SD2.vbproj.CopyC
 Z:\VS Data\Example_1 - Copy\Example_1\Example_1\obj\x64\Release\SD.exe
 Z:\VS Data\Example_1 - Copy\Example_1\Example_1\obj\x64\Release\SD.xml
 Z:\VS Data\Example_1 - Copy\Example_1\Example_1\obj\x64\Release\SD.pdb
+Z:\VS Data\Example_1 - Copy\Example_1\Example_1\obj\x64\Release\SD2.vbprojAssemblyReference.cache
