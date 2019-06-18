@@ -17,3 +17,7 @@ You can use partial words with a combination of each field.
 ### Searching Computer Info
 Search computer by computer name or IP Address.
 ![ttystudio GIF](http://g.recordit.co/rcms7bLUw6.gif)
+
+### Installed Applications Info
+Lists all installed Applications after entering Computer Name or IP Address.
+![ttystudio GIF](http://g.recordit.co/bEt02LFxHF.gif)
