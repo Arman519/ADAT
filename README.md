@@ -28,6 +28,20 @@ This allows you to unlock the account on multiple domain controllers instead of 
 
 ### Searching Computer Info
 Search computer by computer name or IP Address.
+> Computer Information
+- Active User: Current Active User
+- Computer Name: The Computer Name
+- IP Address: Current IP
+- OS: Current Operating System
+- Computer Make: Make of the Computer
+- Computer Model: Model of the Computer
+- CPU: CPU Information
+- Memory: Amount of memory on system by GB
+- Bios version: System Bios Version #
+- CPU Load: Current CPU load percentage
+- Memory Load: Current memory load percentage
+- Last boot: Date and time of Last boot
+- Uptime: Current system uptime by Days, Hours, Minutes
 ![ttystudio GIF](http://g.recordit.co/rcms7bLUw6.gif)
 
 ### Installed Applications Info
